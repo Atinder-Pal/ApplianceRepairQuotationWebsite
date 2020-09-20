@@ -42,13 +42,19 @@ const ApplianceRepair = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const price = 50 + 50 * Number(issueValue);
-    dispatch(quote([nameValue, emailValue, brandValue, issueValue, price]));
+    const issueRate = Number(issueValue.replace(/[^0-9\.]+/g, ""));
+    const issueName = issueValue.replace(/[^a-zA-Z ]+/g, "");
+    const brandRate = Number(brandValue.replace(/[^0-9\.]+/g, ""));
+    const brandName = brandValue.replace(/[^a-zA-Z ]+/g, "");
+    const price = 50 + 50 * issueRate * brandRate;
+    dispatch(
+      quote([nameValue, emailValue, brandName, categoryValue, issueName, price])
+    );
     history.push("/quotation");
   };
 
   const selectIssueComponent = (categoryValue) => {
-    if (categoryValue === "washer") {
+    if (categoryValue === "Washer") {
       return (
         <>
           <label htmlFor="chooseIssue">Select Issue</label>
@@ -58,15 +64,15 @@ const ApplianceRepair = () => {
             onChange={handleChangeIssue}
           >
             <option value="">Select Issue</option>
-            <option value="0.8">Does not drain</option>
-            <option value="1">Does not fill</option>
-            <option value="1.5">Does not spin</option>
-            <option value="1">Does not start</option>
-            <option value="2">Work intermittently</option>
+            <option value="Does not drain0.8">Does not drain</option>
+            <option value="Does not fill1">Does not fill</option>
+            <option value="Does not spin1.5">Does not spin</option>
+            <option value="Does not start1">Does not start</option>
+            <option value="Work intermittently2">Work intermittently</option>
           </select>
         </>
       );
-    } else if (categoryValue === "dryer") {
+    } else if (categoryValue === "Dryer") {
       return (
         <>
           <label htmlFor="chooseIssue">Select Issue</label>
@@ -76,14 +82,14 @@ const ApplianceRepair = () => {
             onChange={handleChangeIssue}
           >
             <option value="">Select Issue</option>
-            <option value="1.5">No Heat</option>
-            <option value="1">No Power</option>
-            <option value="1">Does not Start</option>
-            <option value="1">Works intermittently</option>
+            <option value="No Heat1.5">No Heat</option>
+            <option value="No Power1">No Power</option>
+            <option value="Does not Start1">Does not Start</option>
+            <option value="Works intermittently1">Works intermittently</option>
           </select>
         </>
       );
-    } else if (categoryValue === "fridge") {
+    } else if (categoryValue === "Fridge") {
       return (
         <>
           <label htmlFor="chooseIssue">Select Issue</label>
@@ -93,15 +99,17 @@ const ApplianceRepair = () => {
             onChange={handleChangeIssue}
           >
             <option value="">Select Issue</option>
-            <option value="1.2">Leaking fridge</option>
-            <option value="1.7">Both compartments not cooling</option>
-            <option value="1.2">Fridge not cooling</option>
-            <option value="1.2">Freezer not cooling</option>
-            <option value="2">Icemaker issue</option>
+            <option value="Leaking fridge1.2">Leaking fridge</option>
+            <option value="Both compartments not cooling1.7">
+              Both compartments not cooling
+            </option>
+            <option value="Fridge not cooling1.2">Fridge not cooling</option>
+            <option value="Freezer not cooling1.2">Freezer not cooling</option>
+            <option value="Icemaker issue2">Icemaker issue</option>
           </select>
         </>
       );
-    } else if (categoryValue === "range") {
+    } else if (categoryValue === "Range") {
       return (
         <>
           <label htmlFor="chooseIssue">Select Issue</label>
@@ -111,10 +119,12 @@ const ApplianceRepair = () => {
             onChange={handleChangeIssue}
           >
             <option value="">Select Issue</option>
-            <option value="1.2">Element stuck on high</option>
-            <option value="1.7">Broil won't working</option>
-            <option value="1.2">Bake won't working</option>
-            <option value="1.2">Element won't heat</option>
+            <option value="Element stuck on high1.2">
+              Element stuck on high
+            </option>
+            <option value="Broil won't working1.7">Broil won't working</option>
+            <option value="Bake won't working1.2">Bake won't working</option>
+            <option value="Element won't heat1.2">Element won't heat</option>
           </select>
         </>
       );
@@ -146,10 +156,10 @@ const ApplianceRepair = () => {
             onChange={handleChangeCategory}
           >
             <option value="">Choose your appliance</option>
-            <option value="washer">Washer</option>
-            <option value="dryer">Dryer</option>
-            <option value="rang">Range</option>
-            <option value="fridge">Fridge</option>
+            <option value="Washer">Washer</option>
+            <option value="Dryer">Dryer</option>
+            <option value="Range">Range</option>
+            <option value="Fridge">Fridge</option>
           </select>
           <label htmlFor="name">Name:&nbsp;</label>
           <input
@@ -183,10 +193,10 @@ const ApplianceRepair = () => {
             onChange={handleChangeBrand}
           >
             <option value="">Choose your Brand</option>
-            <option value="w">Whirlpool</option>
-            <option value="e">Electrolux</option>
-            <option value="l">LG</option>
-            <option value="s">Samsung</option>
+            <option value="Whirlpool1.4">Whirlpool</option>
+            <option value="Electrolux1.6">Electrolux</option>
+            <option value="LG1.2">LG</option>
+            <option value="Samsung1">Samsung</option>
           </select>
           {selectIssueComponent(categoryValue)}
           <button className={styles.button} type="submit">

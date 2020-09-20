@@ -5,8 +5,9 @@ const repairReducer = (state = {}, action) => {
         name: action.payload[0],
         email: action.payload[1],
         brand: action.payload[2],
-        issue: action.payload[3],
-        price: action.payload[4],
+        appliance: action.payload[3],
+        issue: action.payload[4],
+        price: action.payload[5],
       };
       return { ...state, newQuotation };
     default:
