@@ -1,15 +1,11 @@
 import React, { useState } from "react";
 import styles from "./ApplianceRepair.module.css";
 import cx from "classnames";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { quote } from "../../actions/repair";
 import { useHistory } from "react-router-dom";
 import {
-  MDBCard,
-  MDBCardBody,
-  MDBCardTitle,
-  MDBCardText,
-  MDBCardHeader,
+  MDBIcon,
   MDBBtn,
   MDBBtnGroup,
   MDBInput,
@@ -29,9 +25,9 @@ const ApplianceRepair = () => {
   const [showMessage1, setShowMessage1] = useState(false);
   const [showMessage2, setShowMessage2] = useState(false);
 
-  const handleChangeCategory = (e) => {
-    setCategoryValue(e.target.value);
-  };
+  // const handleChangeCategory = (e) => {
+  //   setCategoryValue(e.target.value);
+  // };
   const handleChangeBrand = (e) => {
     setBrandValue(e.target.value);
   };
@@ -65,7 +61,7 @@ const ApplianceRepair = () => {
     );
     history.push("/quotation");
   };
-
+  console.log(categoryValue);
   const selectIssueComponent = (categoryValue) => {
     if (categoryValue === "Washer") {
       return (
@@ -75,6 +71,7 @@ const ApplianceRepair = () => {
             id="chooseIssue"
             value={issueValue}
             onChange={handleChangeIssue}
+            className="browser-default custom-select"
           >
             <option value="">Select Issue</option>
             <option value="Does not drain0.8">Does not drain</option>
@@ -93,6 +90,7 @@ const ApplianceRepair = () => {
             id="chooseIssue"
             value={issueValue}
             onChange={handleChangeIssue}
+            className="browser-default custom-select"
           >
             <option value="">Select Issue</option>
             <option value="No Heat1.5">No Heat</option>
@@ -110,6 +108,7 @@ const ApplianceRepair = () => {
             id="chooseIssue"
             value={issueValue}
             onChange={handleChangeIssue}
+            className="browser-default custom-select"
           >
             <option value="">Select Issue</option>
             <option value="Leaking fridge1.2">Leaking fridge</option>
@@ -130,6 +129,7 @@ const ApplianceRepair = () => {
             id="chooseIssue"
             value={issueValue}
             onChange={handleChangeIssue}
+            className="browser-default custom-select"
           >
             <option value="">Select Issue</option>
             <option value="Element stuck on high1.2">
@@ -149,6 +149,7 @@ const ApplianceRepair = () => {
             id="chooseIssue"
             value={issueValue}
             onChange={handleChangeIssue}
+            className="browser-default custom-select"
           >
             <option value="">Select Issue</option>
             <option>Please Select the Appliance Category First</option>
@@ -163,61 +164,100 @@ const ApplianceRepair = () => {
       <MDBContainer>
         <form onSubmit={handleSubmit}>
           <MDBRow>
-            <MDBCol md="4">
-              {/* <label htmlFor="chooseCategory">
-                  Select Appliance Category
-                </label>
-                <select
-                  id="chooseCategory"
-                  value={categoryValue}
-                  onChange={handleChangeCategory}
+            <MDBCol
+              md="4"
+              className="d-flex align-items-center justify-content-center"
+            >
+              <MDBBtnGroup vertical>
+                <p className={`text-danger ${styles.labelAppliance}`}>
+                  Choose your appliance
+                </p>
+                <MDBBtn
+                  color="amber"
+                  value="Washer"
+                  onClick={() => {
+                    setCategoryValue("Washer");
+                  }}
                 >
-                  <option value="">Choose your appliance</option>
-                  <option value="Washer">Washer</option>
-                  <option value="Dryer">Dryer</option>
-                  <option value="Range">Range</option>
-                  <option value="Fridge">Fridge</option>
-                </select> */}
-              <div className="text-center">
-                <MDBBtnGroup vertical>
-                  <p>Choose your appliance</p>
-                  <MDBBtn color="amber">Washer</MDBBtn>
-                  <MDBBtn color="amber">Dryer</MDBBtn>
-                  <MDBBtn color="amber">Range</MDBBtn>
-                  <MDBBtn color="amber">Fridge</MDBBtn>
-                </MDBBtnGroup>
-              </div>
+                  {categoryValue === "Washer" ? (
+                    <MDBIcon icon="check-circle" />
+                  ) : (
+                    ""
+                  )}{" "}
+                  Washer
+                </MDBBtn>
+                <MDBBtn
+                  color="amber"
+                  value="Dryer"
+                  onClick={() => {
+                    setCategoryValue("Dryer");
+                  }}
+                >
+                  {categoryValue === "Dryer" ? (
+                    <MDBIcon icon="check-circle" />
+                  ) : (
+                    ""
+                  )}{" "}
+                  Dryer
+                </MDBBtn>
+                <MDBBtn
+                  color="amber"
+                  value="Range"
+                  onClick={() => {
+                    setCategoryValue("Range");
+                  }}
+                >
+                  {categoryValue === "Range" ? (
+                    <MDBIcon icon="check-circle" />
+                  ) : (
+                    ""
+                  )}{" "}
+                  Range
+                </MDBBtn>
+                <MDBBtn
+                  color="amber"
+                  value="Fridge"
+                  onClick={() => {
+                    setCategoryValue("Fridge");
+                  }}
+                >
+                  {categoryValue === "Fridge" ? (
+                    <MDBIcon icon="check-circle" />
+                  ) : (
+                    ""
+                  )}{" "}
+                  Fridge
+                </MDBBtn>
+              </MDBBtnGroup>
             </MDBCol>
             <MDBCol md="8">
-              <label htmlFor="name">Name:&nbsp;</label>
-              <input
-                id="name"
+              <MDBInput
+                label="Your name"
+                icon="user"
+                group
                 type="text"
+                validate
+                error="wrong"
+                success="right"
                 value={nameValue}
                 onChange={handleChangeName}
               />
-              {showMessage1 ? (
-                <h4 className={styles.danger}>Please input your name</h4>
-              ) : (
-                ""
-              )}
-              <label htmlFor="email">Email: &nbsp;</label>
-              <input
-                id="email"
+              <MDBInput
+                label="Your email"
+                icon="envelope"
+                group
                 type="email"
+                validate
+                error="wrong"
+                success="right"
                 value={emailValue}
                 onChange={handleChangeEmail}
               />
-              {showMessage2 ? (
-                <h4 className={styles.danger}>Please input your email</h4>
-              ) : (
-                ""
-              )}
-
               <label htmlFor="chooseBrand">Select your Brand</label>
               <select
                 id="chooseBrand"
                 value={brandValue}
+                className={`browser-default custom-select ${styles.brandSelect}`}
                 onChange={handleChangeBrand}
               >
                 <option value="">Choose your Brand</option>
@@ -227,9 +267,11 @@ const ApplianceRepair = () => {
                 <option value="Samsung1">Samsung</option>
               </select>
               {selectIssueComponent(categoryValue)}
-              <button className={styles.button} type="submit">
-                SUBMIT
-              </button>
+              <div className={`text-center ${styles.submitButton}`}>
+                <MDBBtn gradient="aqua" type="submit">
+                  Submit
+                </MDBBtn>
+              </div>
             </MDBCol>
           </MDBRow>
         </form>
