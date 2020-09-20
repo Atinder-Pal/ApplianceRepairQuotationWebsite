@@ -66,3 +66,15 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+# Citations
+
+Create Countdown Timer
+https://www.w3schools.com/howto/howto_js_countdown.asp
+
+https://www.sitepoint.com/build-javascript-countdown-timer-no-dependencies/
+
+useRef tutorial
+https://www.youtube.com/watch?v=t2ypzz6gJm0
+
+
