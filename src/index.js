@@ -11,6 +11,9 @@ import LandingPage from "./components/LandingPage/LandingPage";
 import ApplianceRepair from "./components/ApplianceRepair/ApplianceRepair";
 import ContactUs from "./components/ContactUs/ContactUs";
 import QuotationForm from "./components/QuotationForm/QuotationForm";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "bootstrap-css-only/css/bootstrap.min.css";
+import "mdbreact/dist/css/mdb.css";
 
 const store = createStore(
   rootReducer,

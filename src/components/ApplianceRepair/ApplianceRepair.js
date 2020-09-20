@@ -4,6 +4,19 @@ import cx from "classnames";
 import { useDispatch, useSelector } from "react-redux";
 import { quote } from "../../actions/repair";
 import { useHistory } from "react-router-dom";
+import {
+  MDBCard,
+  MDBCardBody,
+  MDBCardTitle,
+  MDBCardText,
+  MDBCardHeader,
+  MDBBtn,
+  MDBBtnGroup,
+  MDBInput,
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+} from "mdbreact";
 
 const ApplianceRepair = () => {
   const dispatch = useDispatch();
@@ -147,63 +160,80 @@ const ApplianceRepair = () => {
 
   return (
     <>
-      <section className={styles.applianceRepair}>
-        <form className={styles.repairForm} onSubmit={handleSubmit}>
-          <label htmlFor="chooseCategory">Select Appliance Category</label>
-          <select
-            id="chooseCategory"
-            value={categoryValue}
-            onChange={handleChangeCategory}
-          >
-            <option value="">Choose your appliance</option>
-            <option value="Washer">Washer</option>
-            <option value="Dryer">Dryer</option>
-            <option value="Range">Range</option>
-            <option value="Fridge">Fridge</option>
-          </select>
-          <label htmlFor="name">Name:&nbsp;</label>
-          <input
-            id="name"
-            type="text"
-            value={nameValue}
-            onChange={handleChangeName}
-          />
-          {showMessage1 ? (
-            <h4 className={styles.danger}>Please input your name</h4>
-          ) : (
-            ""
-          )}
-          <label htmlFor="email">Email: &nbsp;</label>
-          <input
-            id="email"
-            type="email"
-            value={emailValue}
-            onChange={handleChangeEmail}
-          />
-          {showMessage2 ? (
-            <h4 className={styles.danger}>Please input your email</h4>
-          ) : (
-            ""
-          )}
+      <MDBContainer>
+        <form onSubmit={handleSubmit}>
+          <MDBRow>
+            <MDBCol md="4">
+              {/* <label htmlFor="chooseCategory">
+                  Select Appliance Category
+                </label>
+                <select
+                  id="chooseCategory"
+                  value={categoryValue}
+                  onChange={handleChangeCategory}
+                >
+                  <option value="">Choose your appliance</option>
+                  <option value="Washer">Washer</option>
+                  <option value="Dryer">Dryer</option>
+                  <option value="Range">Range</option>
+                  <option value="Fridge">Fridge</option>
+                </select> */}
+              <div className="text-center">
+                <MDBBtnGroup vertical>
+                  <p>Choose your appliance</p>
+                  <MDBBtn color="amber">Washer</MDBBtn>
+                  <MDBBtn color="amber">Dryer</MDBBtn>
+                  <MDBBtn color="amber">Range</MDBBtn>
+                  <MDBBtn color="amber">Fridge</MDBBtn>
+                </MDBBtnGroup>
+              </div>
+            </MDBCol>
+            <MDBCol md="8">
+              <label htmlFor="name">Name:&nbsp;</label>
+              <input
+                id="name"
+                type="text"
+                value={nameValue}
+                onChange={handleChangeName}
+              />
+              {showMessage1 ? (
+                <h4 className={styles.danger}>Please input your name</h4>
+              ) : (
+                ""
+              )}
+              <label htmlFor="email">Email: &nbsp;</label>
+              <input
+                id="email"
+                type="email"
+                value={emailValue}
+                onChange={handleChangeEmail}
+              />
+              {showMessage2 ? (
+                <h4 className={styles.danger}>Please input your email</h4>
+              ) : (
+                ""
+              )}
 
-          <label htmlFor="chooseBrand">Select your Brand</label>
-          <select
-            id="chooseBrand"
-            value={brandValue}
-            onChange={handleChangeBrand}
-          >
-            <option value="">Choose your Brand</option>
-            <option value="Whirlpool1.4">Whirlpool</option>
-            <option value="Electrolux1.6">Electrolux</option>
-            <option value="LG1.2">LG</option>
-            <option value="Samsung1">Samsung</option>
-          </select>
-          {selectIssueComponent(categoryValue)}
-          <button className={styles.button} type="submit">
-            SUBMIT
-          </button>
+              <label htmlFor="chooseBrand">Select your Brand</label>
+              <select
+                id="chooseBrand"
+                value={brandValue}
+                onChange={handleChangeBrand}
+              >
+                <option value="">Choose your Brand</option>
+                <option value="Whirlpool1.4">Whirlpool</option>
+                <option value="Electrolux1.6">Electrolux</option>
+                <option value="LG1.2">LG</option>
+                <option value="Samsung1">Samsung</option>
+              </select>
+              {selectIssueComponent(categoryValue)}
+              <button className={styles.button} type="submit">
+                SUBMIT
+              </button>
+            </MDBCol>
+          </MDBRow>
         </form>
-      </section>
+      </MDBContainer>
     </>
   );
 };
