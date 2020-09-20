@@ -46,6 +46,13 @@ const LandingPage = () => {
       };
   })
 
+ const popUpCode = () => {
+
+  return () => {
+
+  };
+ }
+
   return (
   <section className={styles.timerContainer}>
     <section className={styles.timer}>

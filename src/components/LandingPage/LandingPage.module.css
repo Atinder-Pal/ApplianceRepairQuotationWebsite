@@ -147,7 +147,9 @@ section > div:nth-child(2) > section:nth-child(7)
 } */
 section p:first-child, #timerElements span{
     font-family: 'Roboto_mono', 'Courier New', 'Courier', 'sans-serif';
-    font-size: 1em;
+    font-size: 100%;
+    /* margin-top: 0.5rem;
+    margin-bottom: 0.1rem; */
 }
 
 /* @media screen and (max-width: 480px){
