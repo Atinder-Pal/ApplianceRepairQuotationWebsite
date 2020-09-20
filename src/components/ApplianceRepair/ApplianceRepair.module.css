@@ -17,8 +17,15 @@
   align-items: center;
 }
 
-.button {
-  width: 100px;
-  margin: 1rem 0 0 0;
-  background-color: #7fff00;
+.brandSelect {
+  margin-bottom: 1rem;
+}
+
+.submitButton {
+  margin-top: 1rem;
+}
+
+.labelAppliance {
+  font-size: 18px;
+  font-weight: 600;
 }
