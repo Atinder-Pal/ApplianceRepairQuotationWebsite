@@ -19,21 +19,25 @@ const QuotationForm = () => {
         const pdf = new jsPDF();
         pdf.addImage(imgData, 'JPEG', 0, 0);
         // pdf.output('dataurlnewwindow');
-        pdf.save("download.pdf");
+        pdf.save("quote.pdf");
       });
   //End Citation
   }
-  return (
-    <div id='downloadableForm' className='quotationForm'>
-      <h2>QuotationForm</h2>
-        <p>Customer Name: <span>{ quoteInfo.newQuotation.name }</span></p>
-        <p>Customer Email: <span>{ quoteInfo.newQuotation.email }</span></p>
-        <p>Appliance: <span> { quoteInfo.newQuotation.appliance }</span></p>
-        <p>Brand: <span> {quoteInfo.newQuotation.brand }</span></p>
-        <p>Issue: <span> { quoteInfo.newQuotation.issue }</span></p>
-        <p>Quote: $ <span> { quoteInfo.newQuotation.price }</span></p>  
-        <button type='button' onClick={printDocument}>Download PDF</button><br />      
-    </div>
+  return ( 
+    <>
+
+      <div id='downloadableForm' className={styles.quotationForm}>
+          <h2 className={styles.quoteHeading}>Quotation</h2>
+          <p>Company Name: <span>ApplianceMaster.Ltd</span> </p>
+          <p>Customer Name: <span>{ quoteInfo.newQuotation.name }</span></p>
+          <p>Customer Email: <span>{ quoteInfo.newQuotation.email }</span></p>
+          <p>Appliance: <span> { quoteInfo.newQuotation.appliance }</span></p>
+          <p>Brand: <span> {quoteInfo.newQuotation.brand }</span></p>
+          <p>Issue: <span> { quoteInfo.newQuotation.issue }</span></p>
+          <p>Quote: <span> ${ quoteInfo.newQuotation.price }</span></p>       
+      </div>     
+      <button type='button' className={styles.pdfButton} onClick={printDocument}>Download PDF</button><br />    
+    </>
   );
 };
 
