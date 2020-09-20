@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import jsPDF from "jspdf";
 import html2canvas from 'html2canvas';
+import styles from "./QuotationForm.module.css";
 
 
 const QuotationForm = () => {
@@ -12,7 +13,7 @@ const QuotationForm = () => {
   //https://stackoverflow.com/questions/44989119/generating-a-pdf-file-from-react-components
   const printDocument =(e) => {
     e.preventDefault();
-    const input = document.getElementById('downloadable-form');
+    const input = document.getElementById('downloadableForm');
     html2canvas(input).then((canvas) => {
         const imgData = canvas.toDataURL('image/png');
         const pdf = new jsPDF();
@@ -23,7 +24,7 @@ const QuotationForm = () => {
   //End Citation
   }
   return (
-    <div id='downloadable-form'>
+    <div id='downloadableForm' className='quotationForm'>
       <h2>QuotationForm</h2>
         <p>Customer Name: <span>{ quoteInfo.newQuotation.name }</span></p>
         <p>Customer Email: <span>{ quoteInfo.newQuotation.email }</span></p>
