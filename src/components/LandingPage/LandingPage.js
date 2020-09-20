@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "../LandingPage/LandingPage.module.css";
+import styles from "./LandingPage.module.css";
 
 const LandingPage = () => {
   return (
-  <section className="timer-container">
+  <section className={styles.timerContainer}>
     <section className="timer">
       <div>
         <span className="mdi mdi-calendar-clock timer-icon"></span>

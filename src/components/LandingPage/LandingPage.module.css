@@ -1,6 +1,6 @@
 *{outline: .1px solid #ff0000}
-.timer-container {
-    /* background-image: url('../'); */
+.timerContainer {
+    background-image: url('../../img/landing/fire-log.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
