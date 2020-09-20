@@ -4,13 +4,13 @@ import styles from "./LandingPage.module.css";
 const LandingPage = () => {
   return (
   <section className={styles.timerContainer}>
-    <section className="timer">
+    <section className={styles.timer}>
       <div>
-        <span className="mdi mdi-calendar-clock timer-icon"></span>
-        <h2>CountDown Timer</h2>
+        <span className={styles.percentIcon}></span> 
+        <h2>CountDown Timer 300 <i class="fas fa-percent"> OFF</i> </h2>
         <p>Coupon expire date</p>
       </div>
-      <div>
+      <div id={styles.timerElements}>
         <section>
             <p>00</p>
             <p><small>Days</small></p>
@@ -31,10 +31,11 @@ const LandingPage = () => {
             <p><small>Sec</small></p>
         </section>
       </div>
+      <section>
+        <button className={styles.btn}> Get Promotion Code <i class="fas fa-tags"></i> </button>
+      </section>
     </section>
-    <section>
-      <button id="btn"> Get Promotion Code </button>
-    </section>
+   
   </section>
   );
 };
