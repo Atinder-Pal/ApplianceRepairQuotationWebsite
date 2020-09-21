@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./LandingPage.module.css";
+import Modal from "./Modal";
 
 const LandingPage = () => {
 // set time where to start before load
@@ -46,13 +47,19 @@ const LandingPage = () => {
       };
   })
 
- const popUpCode = () => {
+//  const popUpCode = () => {
 
-  return () => {
+//   return () => {
 
-  };
- }
+//   };
+//  }
 
+const BUTTON = {
+  position: 'relative',
+  zIndex:1
+}
+
+const [isOpen, setIsOpen] = useState(false)
   return (
   <section className={styles.timerContainer}>
     <section className={styles.timer}>
@@ -82,9 +89,13 @@ const LandingPage = () => {
             <p><small>Sec</small></p>
         </section>
       </div>
-      <section>
-        <button className={styles.btn}> Get Promotion Code <i className="fas fa-tags"></i> </button>
+      <section style={BUTTON}>
+        <button onClick={() => setIsOpen(true)} className={styles.btn}> Get Promotion Code <i className="fas fa-tags"></i> </button>
+        <Modal id="modal" open={isOpen} onClose={()=> setIsOpen(false)}>
+            Random string From pre-set Array: 123456789!
+      </Modal>
       </section>
+      
     </section>
    
   </section>

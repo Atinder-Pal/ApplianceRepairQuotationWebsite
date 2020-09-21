@@ -78,9 +78,9 @@ body {
   font-weight: 600;
   margin-top: 0.5em;
   padding: 0.5em;
-  font-size: large;
-  background-color: rgb(78, 230, 78);
-  width: 40vw;
+  /* font-size: large;
+  background-color: rgb(78, 230, 78); */
+  /* width: 40vw; */
 }
 /* #timerElements p{
     color: #f8f8f8;
@@ -142,8 +142,28 @@ section p:first-child,
 #timerElements span {
   font-family: "Roboto_mono", "Courier New", "Courier", "sans-serif";
   font-size: 100%;
-  /* margin-top: 0.5rem;
-    margin-bottom: 0.1rem; */
+  margin-top: 0.5rem;
+  margin-bottom: 0.1rem;
+}
+
+.modal {
+  display: flex;
+  flex-wrap: wrap;
+  /* position: relative; */
+  /* align-items: center; */
+  /* justify-content: space-around; */
+  position:fixed;
+  top: 50%;
+  left: 37%;
+  /* transform: translate (-50% ,-50%); */
+  background-color: rgb(228, 74, 233);
+  padding: 50px;
+  z-Index: 1000;
+
+  /* display: 'flex'
+  flex-direction: 'column',
+  height: '40vw',
+   width: '40vw' */
 }
 
 /* @media screen and (max-width: 480px){
