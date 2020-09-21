@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import cx from "classnames";
 import styles from "./NavBar.module.css";
 import {
   MDBNavbar,
@@ -9,13 +8,8 @@ import {
   MDBNavLink,
   MDBNavbarToggler,
   MDBCollapse,
-  MDBDropdown,
-  MDBDropdownToggle,
-  MDBDropdownMenu,
-  MDBDropdownItem,
   MDBIcon,
 } from "mdbreact";
-import { Link, BrowserRouter as Router } from "react-router-dom";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +19,7 @@ const NavBar = () => {
   return (
     <MDBNavbar color="default-color" dark expand="md">
       <MDBNavbarBrand>
-        <strong className="white-text">Navbar</strong>
+        <strong className="white-text">ApplianceMaster</strong>
       </MDBNavbarBrand>
       <MDBNavbarToggler onClick={toggleCollapse} />
       <MDBCollapse id="navbarCollapse3" isOpen={isOpen} navbar>

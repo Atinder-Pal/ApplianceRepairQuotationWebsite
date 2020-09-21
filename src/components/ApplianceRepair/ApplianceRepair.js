@@ -268,7 +268,19 @@ const ApplianceRepair = () => {
               </select>
               {selectIssueComponent(categoryValue)}
               <div className={`text-center ${styles.submitButton}`}>
-                <MDBBtn gradient="aqua" type="submit">
+                <MDBBtn
+                  gradient="aqua"
+                  type="submit"
+                  disabled={
+                    !(
+                      categoryValue &&
+                      nameValue &&
+                      emailValue &&
+                      brandValue &&
+                      issueValue
+                    )
+                  }
+                >
                   Submit
                 </MDBBtn>
               </div>
