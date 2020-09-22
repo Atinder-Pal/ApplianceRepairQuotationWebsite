@@ -54,18 +54,21 @@ const LandingPage = () => {
 //   };
 //  }
 
-const BUTTON = {
-  position: 'relative',
-  zIndex:1
-}
+
+
+// const BUTTON = {
+//   position: 'relative',
+//   zIndex:1
+// }
 
 const [isOpen, setIsOpen] = useState(false)
+
   return (
   <section className={styles.timerContainer}>
     <section className={styles.timer}>
       <div>
         <span className={styles.percentIcon}></span> 
-        <h2>CountDown Timer 300 <i className="fas fa-percent"> OFF</i> </h2>
+        <h2>CountDown Timer 30 <i className="fas fa-percent"> OFF</i> </h2>
         <p>Coupon expire date</p>
       </div>
       <div id={styles.timerElements}>
@@ -89,13 +92,20 @@ const [isOpen, setIsOpen] = useState(false)
             <p><small>Sec</small></p>
         </section>
       </div>
-      <section style={BUTTON}>
-        <button onClick={() => setIsOpen(true)} className={styles.btn}> Get Promotion Code <i className="fas fa-tags"></i> </button>
-        <Modal id="modal" open={isOpen} onClose={()=> setIsOpen(false)}>
-            Random string From pre-set Array: 123456789!
-      </Modal>
+      {/* <section style={BUTTON}> */}
+    <div className={styles.container}>
+      <section className={styles.center}>
+          <button onClick={() => setIsOpen(true)} className={styles.button}> <span><i className="fas fa-tags"></i> Get Promo Code</span> 
+          <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+            <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+            <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+          </svg> 
+          </button>
+          <Modal id="modal" open={isOpen} onClose={()=> setIsOpen(false)}>
+              
+          </Modal>
       </section>
-      
+      </div>
     </section>
    
   </section>

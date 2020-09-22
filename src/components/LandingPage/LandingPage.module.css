@@ -73,15 +73,83 @@ body {
     font-size: 5em;
 } */
 
-.btn {
+/* .button {
   font-family: "Roboto_Mono", "Courier New", "Courier", "sans-serif";
   font-weight: 600;
-  margin-top: 0.5em;
+  margin-top: 5em;
   padding: 0.5em;
-  /* font-size: large;
-  background-color: rgb(78, 230, 78); */
-  /* width: 40vw; */
+} */
+/* ===========Button work area Start============ */
+
+/* section.center, section.center > *{
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+} */
+.container {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.center {
+  width: 180px;
+  height: 60px;
+  position: absolute;
+}
+
+.button {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91C9FF;
+  outline: none;
+  transition: 1s ease-in-out;
+  padding: 3%;
+  /* margin-top: 5em; */
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.button:hover {
+  transition: 1s ease-in-out;
+  background: #4F95DA;
+}
+
+.button:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.button span {
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+
+/* ===========Button work area End ============= */
 /* #timerElements p{
     color: #f8f8f8;
     border: 3px;
@@ -147,24 +215,43 @@ section p:first-child,
 }
 
 .modal {
+  background-image: url("../../img/landing/texture.jpg");
+  border: 20px solid rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+  box-shadow: 25px 25px 50px 0 #555 hite inset, -25px -25px 50px 0 white inset; 
+  font-weight: 600;
+  font-size: large;
   display: flex;
   flex-wrap: wrap;
-  /* position: relative; */
-  /* align-items: center; */
-  /* justify-content: space-around; */
-  position:fixed;
+  align-items: center;
+  width: 600px;
+  max-width: 100%;
+  justify-content: space-around;
+  position: fixed;
   top: 50%;
   left: 37%;
   /* transform: translate (-50% ,-50%); */
-  background-color: rgb(228, 74, 233);
-  padding: 50px;
-  z-Index: 1000;
-
-  /* display: 'flex'
-  flex-direction: 'column',
-  height: '40vw',
-   width: '40vw' */
+  padding: 35px;
+  z-Index: 2;
+/* position: relative; */
+  /* height: 40vw;
+   width: 40vw; */
 }
+
+/* 
+@media screen and (max-width: 480px){
+ .modal {
+  position:fixed;
+  top: 50%;
+  left: 50%;
+ 
+  width: 100px;
+  max-width: 100%;
+  
+  }
+} */
+
+
 
 /* @media screen and (max-width: 480px){
     #timerElements {

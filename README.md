@@ -69,12 +69,20 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 # Citations
 
-Create Countdown Timer
+## Create Countdown Timer
+
 https://www.w3schools.com/howto/howto_js_countdown.asp
 
 https://www.sitepoint.com/build-javascript-countdown-timer-no-dependencies/
 
 useRef tutorial
 https://www.youtube.com/watch?v=t2ypzz6gJm0
+
+## Button CSS effect
+
+https://codepen.io/vitor-siqueira/pen/xNBExN
+
+## Modal pop up
+
 
 
