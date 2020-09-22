@@ -42,7 +42,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /* color: rgb(245, 239, 239); */
+  color: none;
   width: 100vw;
   height: 100vh;
 }
@@ -52,7 +52,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /* color: rgb(245, 239, 239); */
+  color: none;
   width: 100vw;
   height: 100vh;
 }
@@ -125,6 +125,8 @@ body {
   grid-template-columns: repeat(7, 1fr);
   align-items: center;
   margin-top: 3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   padding: 1rem;
   text-align: center;
 }
