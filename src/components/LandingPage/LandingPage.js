@@ -1,7 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./LandingPage.module.css";
+import Modal from "./Modal";
 
 const LandingPage = () => {
+
+//==========Timer Logic starts here==========
 // set time where to start before load
     const [timeD, setDays] = useState ('00');
     const [timeH, setHours] = useState ('00');
@@ -45,50 +48,70 @@ const LandingPage = () => {
           clearInterval(period.current);
       };
   })
+// =====Timer Logic ends here=============
 
- const popUpCode = () => {
-
-  return () => {
-
-  };
- }
-
+//isOpen for Modal
+const [isOpen, setIsOpen] = useState(false)
+// =======Returns entire Landing component==========
   return (
-  <section className={styles.timerContainer}>
-    <section className={styles.timer}>
-      <div>
-        <span className={styles.percentIcon}></span> 
-        <h2>CountDown Timer 300 <i className="fas fa-percent"> OFF</i> </h2>
-        <p>Coupon expire date</p>
+  <section className={styles.grid}>  
+    {/* ==========Fade in Pictures block============ */}
+    <div className={styles.crossFade}>
+      <div id={styles.cf}>
+        <img className={styles.bottom}  alt="kitchen1"/>
+        <img className={styles.top}  alt="lg-laundry" />
       </div>
-      <div id={styles.timerElements}>
-        <section className={styles.elementsHeight}>
-            <p>{timeD}</p>
-            <p><small>Days</small></p>
-        </section>
-        <span>:</span>
-        <section>
-            <p>{timeH}</p>
-            <p><small>Hour</small></p>
-        </section>
-        <span>:</span>
-        <section>
-            <p>{timeM}</p>
-            <p><small>Min</small></p>
-        </section>
-        <span>:</span>
-        <section>
-            <p>{timeS}</p>
-            <p><small>Sec</small></p>
-        </section>
-      </div>
-      <section>
-        <button className={styles.btn}> Get Promotion Code <i className="fas fa-tags"></i> </button>
+    </div>
+    {/* ===========Timer block========== */}
+    <section className={styles.timerContainer}>
+      <section className={styles.timer}>
+        <div>
+          <span className={styles.percentIcon}></span> 
+          <h2>Limited Offer 30 <i className="fas fa-percent"> OFF</i> </h2>
+          <p>Coupon expire date</p>
+        </div>
+        <div id={styles.timerElements}>
+          <section className={styles.elementsHeight}>
+              <p>{timeD}</p>
+              <p><small>Days</small></p>
+          </section>
+          <span>:</span>
+          <section>
+              <p>{timeH}</p>
+              <p><small>Hour</small></p>
+          </section>
+          <span>:</span>
+          <section>
+              <p>{timeM}</p>
+              <p><small>Min</small></p>
+          </section>
+          <span>:</span>
+          <section>
+              <p>{timeS}</p>
+              <p><small>Sec</small></p>
+          </section>
+        </div>
       </section>
     </section>
+
+    {/* =====Button block========= */}
+    <div className={styles.container}>
+      <section className={styles.center}>
+        <button onClick={() => setIsOpen(true)} className={styles.button}> <span><i className="fas fa-tags"></i> Get Promo Code</span> 
+          <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+            <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+            <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+          </svg> 
+        </button>
+        <Modal id="modal" open={isOpen} onClose={()=> setIsOpen(false)}>
+            
+        </Modal>
+      </section>
+    </div>
    
   </section>
   );
+  // ========Return Lending ends==========
 };
 
 export default LandingPage;
