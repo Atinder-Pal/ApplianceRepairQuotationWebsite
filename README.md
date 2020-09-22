@@ -69,6 +69,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 # Citations
 
+**Landing Page**
+
 ## Create Countdown Timer
 
 https://www.w3schools.com/howto/howto_js_countdown.asp
@@ -83,6 +85,12 @@ https://www.youtube.com/watch?v=t2ypzz6gJm0
 https://codepen.io/vitor-siqueira/pen/xNBExN
 
 ## Modal pop up
+https://upmostly.com/tutorials/modal-components-react-custom-hooks
+
+## Wave Gif by Evan Hilton
+https://giphy.com/gifs/wave-waves-surf-3og0IwoOyuY3ug4xaM
+
+
 
 
 

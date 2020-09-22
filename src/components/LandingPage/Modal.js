@@ -25,7 +25,10 @@ import styles from "./LandingPage.module.css";
 export default function Modal({ open, children, onClose}){
     if (!open) return null
     const myArray = [
-        "  123456789"
+        "123456789",
+        "abcdefg",
+        "frt03049fdf",
+        "be4ir75ut9"
       ];
     const randomItem = myArray[Math.floor(Math.random()*myArray.length)];
  
@@ -33,10 +36,10 @@ export default function Modal({ open, children, onClose}){
     return ReactDom.createPortal(
         <>
         {/* <div style={OVERLAY_STYLES} /> */}
-        <div className={styles.modal}>
+        <div id={styles.modal}>
             <button onClick={onClose}>x</button>
             {children}
-            <div>Use this promo code in your email: </div>
+            <div>CODE: </div>
             <div>{randomItem}</div>
         </div>
         
