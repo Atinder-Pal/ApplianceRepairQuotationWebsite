@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import jsPDF from "jspdf";
 import html2canvas from 'html2canvas';
 import styles from "./QuotationForm.module.css";
-import { MDBCard, MDBCardTitle, MDBCardText, MDBContainer,  MDBBtn, MDBIcon } from "mdbreact";
+import { MDBIcon } from "mdbreact";
 
 const QuotationForm = () => {
   const quoteInfo = useSelector(state => state.repair);
@@ -17,41 +17,54 @@ const QuotationForm = () => {
     html2canvas(input).then((canvas) => {
         const imgData = canvas.toDataURL('image/png');
         const pdf = new jsPDF();
-        pdf.addImage(imgData, 'JPEG', 0, 0);
-        // pdf.output('dataurlnewwindow');
+        pdf.addImage(imgData, 'JPEG', 0, 0);        
         pdf.save("quote.pdf");
       });
   //End Citation
   }
-  return ( 
-    <>
-    <MDBContainer>
-      <MDBCard className="card-body" style={{ marginTop: "5rem", marginBottom: "5rem" }}>     
-        
-        <div className="d-flex justify-content-center">
-          <img src="" alt="Company Logo" className="p-2 col-example text-left" />
-          <MDBCardTitle className="p-2 col-example text-left"> Appliance Repair Quote <MDBIcon icon="file-invoice-dollar" /></MDBCardTitle>
-        </div>
-        <MDBCardText>
+  return (    
+      <article>
+        {/* <h2> Quotation Form</h2> */}
         <div id='downloadableForm' className={styles.quotationForm}>
-          {/* <h2 className={styles.quoteHeading}>Quotation</h2> */}
-          <p>Company Name: <span>ApplianceMaster.Ltd</span> </p>
-          <p>Customer Name: <span>{ quoteInfo.newQuotation.name }</span></p>
-          <p>Customer Email: <span>{ quoteInfo.newQuotation.email }</span></p>
-          <p>Appliance: <span> { quoteInfo.newQuotation.appliance }</span></p>
-          <p>Brand: <span> {quoteInfo.newQuotation.brand }</span></p>
-          <p>Issue: <span> { quoteInfo.newQuotation.issue }</span></p>
-          <p>Quote: <span> ${ quoteInfo.newQuotation.price }</span></p>       
-      </div>     
-        </MDBCardText>
-        <MDBBtn gradient="aqua" className={styles.pdfButton} onClick={printDocument}>Download PDF</MDBBtn>
-        
-      </MDBCard>
-    </MDBContainer>
-
-      
-        
-    </>
+        <section>
+          <img src="" alt="Company Logo"/>
+          <h2>Appliance Repair Quote <MDBIcon icon="file-invoice-dollar" /></h2>
+        </section>
+        <table>
+            <tbody>
+              <tr>
+                <td >Company Name:</td>
+                <td>ApplianceMaster.Ltd</td>
+              </tr>
+              <tr>
+                <td>Customer Name:</td>
+                <td>{ quoteInfo.newQuotation.name }</td>
+              </tr>
+              <tr>
+                <td>Customer Email:</td>
+                <td>{ quoteInfo.newQuotation.email }</td>
+              </tr>
+              <tr>
+                <td>Appliance:</td>
+                <td>{ quoteInfo.newQuotation.appliance }</td>
+              </tr>
+              <tr>
+                <td>Brand:</td>
+                <td>{quoteInfo.newQuotation.brand }</td>
+              </tr>
+              <tr>
+                <td>Issue:</td>
+                <td>{ quoteInfo.newQuotation.issue }</td>
+              </tr>              
+              <tr>              
+                <td>Quote:</td>
+                <td>${ quoteInfo.newQuotation.price }</td>              
+              </tr>              
+            </tbody>              
+          </table>
+        </div>
+        <button className={styles.pdfButton} onClick={printDocument}>Download PDF <MDBIcon far icon="file-pdf" /></button>
+      </article>   
   );
 };
 
