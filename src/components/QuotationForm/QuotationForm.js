@@ -61,7 +61,7 @@ const QuotationForm = () => {
                 <td>${ quoteInfo.newQuotation.price }</td>              
               </tr>              
             </tbody>              
-          </table>
+          </table>          
         </div>
         <button className={styles.pdfButton} onClick={printDocument}>Download PDF <MDBIcon far icon="file-pdf" /></button>
       </article>   

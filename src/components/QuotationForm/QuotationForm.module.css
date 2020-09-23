@@ -1,20 +1,19 @@
-.quotationForm {
-    width: '210mm';
-    min-height: '297mm';
-    margin-left: 'auto';
-    margin-right: 'auto';
-}
 
 article {
-    width:96%;
+    width:96%;    
     margin:5vh auto;
-    background-color: whitesmoke;
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* background-color: #F2D6B3; */
+    background-image: url("../../img/landing/texture.jpg");
+    
 }
 
 article div {
     width:98%;
     height:98%;
-    margin:3vh auto 0 auto;
+    margin:0 auto;
     padding-top:0.2vh;
 }
 
@@ -24,17 +23,22 @@ img {
 
 article h2 {
     text-align:center;
-    color:red;
+    /* color:#F2BB13; */
     font-size:1.25rem;
-    font-weight: bolder;
+    font-weight: 900;    
+  -webkit-text-fill-color: #F2BB13; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #D96523;
 }
 
 article section {
     margin-top: 5vh;
     padding-top: 1.5rem;
     padding-bottom: 1rem;
+    padding-left:0.5rem;
+    padding-right:0.5rem;
     margin-bottom:0;
-    background-color:antiquewhite;
+    background: linear-gradient(90deg, rgba(54,200,217,1) 0%, rgba(34,162,242,1) 100%);
 }  
 
 table,td {
@@ -65,7 +69,7 @@ margin:0 auto 3vh auto;
 
 .pdfButton {
 display:block;
-margin:3vh auto;
+margin:3vh auto 0 auto;
 padding: 0.5rem;
 font-size: 0.9rem; 
 font-weight: 500;
