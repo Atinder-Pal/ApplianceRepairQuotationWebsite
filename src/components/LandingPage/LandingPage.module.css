@@ -1,3 +1,5 @@
+/* *{ outline: .1px solid #ff0000 !important; }  */
+
 @font-face {
   font-family: "Roboto_Mono";
   src: url("../../fonts/Roboto_Mono/RobotoMono-Italic-VariableFont_wght.ttf");
@@ -12,9 +14,74 @@ body {
   font-size: 100;
 }
 
+/* ============= Grid Layout starts================= */
+.grid{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 600px 650px 1px;
+  grid-template-areas: "imgArea" "timerArea" "btnArea";
+
+}
+
+.crossFade{
+  grid-area: imgArea;
+}
+.timerContainer {
+  grid-area: timerArea;
+}
+.container {
+  grid-area: btnArea;
+}
+
+/* ============= Grid Layout ends =================== */
+/* =========Fade in Pictures kitchen starts========== */
+
+.bottom {
+  background-image: url("../../img/landing/kitchen1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: none;
+  width: 100vw;
+  height: 100vh;
+}
+.top {
+  background-image: url("../../img/landing/lg-laundry.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: none;
+  width: 100vw;
+  height: 100vh;
+}
+
+#cf {
+  position:relative;
+  /* height:281px;
+  width:450px; */
+  margin:0 auto;
+}
+
+#cf img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#cf img.top:hover {
+  opacity:0;
+}
+/* =========Fade in Pictures kitchen ends========== */
+
+/* ==========Timer Elements CSS stats ============= */
 /* <span>Photo by <a href="https://unsplash.com/@uwejelting?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Uwe Jelting</a> on <a href="https://unsplash.com/s/photos/flame?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> */
 .timerContainer {
-  background-image: url("../../img/landing/fire-log.jpg");
+  background-image: url("../../img/landing/wave.gif");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -22,18 +89,22 @@ body {
   color: rgb(245, 239, 239);
   width: 100vw;
   height: 100vh;
+  z-index: -1;
 }
 
 .timer {
   background-color: rgba(240, 235, 235, 0.5);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: flex-end; */
+  align-content: flex-end;
   justify-content: center;
-  padding-bottom: 7em;
+  /* padding-bottom: 1em; */
+  /* margin-top: bottom; */
   padding-top: 2em;
   width: 100%;
   height: 100%;
+  
 }
 #timerElements {
   /* background-color: rgba(240, 235, 235, 0.5); */
@@ -54,6 +125,8 @@ body {
   grid-template-columns: repeat(7, 1fr);
   align-items: center;
   margin-top: 3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   padding: 1rem;
   text-align: center;
 }
@@ -69,23 +142,11 @@ body {
   /* border: 3px; */
 }
 
-/* .percentIcon {
-    font-size: 5em;
-} */
-
-.btn {
-  font-family: "Roboto_Mono", "Courier New", "Courier", "sans-serif";
-  font-weight: 600;
-  margin-top: 0.5em;
-  padding: 0.5em;
-  font-size: large;
-  background-color: rgb(78, 230, 78);
-  width: 40vw;
-}
 /* #timerElements p{
     color: #f8f8f8;
     border: 3px;
 } */
+
 /* section > div:nth-child(2) > section:nth-child(1) */
 .elementsHeight {
   border: solid 1px #555;
@@ -142,9 +203,135 @@ section p:first-child,
 #timerElements span {
   font-family: "Roboto_mono", "Courier New", "Courier", "sans-serif";
   font-size: 100%;
-  /* margin-top: 0.5rem;
-    margin-bottom: 0.1rem; */
+  margin-top: 0.5rem;
+  margin-bottom: 0.1rem;
 }
+
+/* ==========Timer Elements CSS ends ============= */
+
+
+
+/* ===========Button work area Start============ */
+
+/* section.center, section.center > *{
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+} */
+.container {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.center {
+  width: 180px;
+  height: 60px;
+  position: absolute;
+}
+
+.button {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91C9FF;
+  outline: none;
+  transition: 1s ease-in-out;
+  padding: 3%;
+  /* margin-top: 5em; */
+}
+
+/* .button {
+  font-family: "Roboto_Mono", "Courier New", "Courier", "sans-serif";
+  font-weight: 600;
+  margin-top: 5em;
+  padding: 0.5em;
+} */
+
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.button:hover {
+  transition: 1s ease-in-out;
+  background: #4F95DA;
+}
+
+.button:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.button span {
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+#modal {
+  background-image: url("../../img/landing/texture.jpg");
+  border: 20px solid rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+  /* box-shadow: 25px 25px 50px 0 #555 hite inset, -25px -25px 50px 0 white inset;  */
+  font-weight: 600;
+  font-size: large;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 50%;
+  max-width: 100%;
+  justify-content: space-around;
+  /* position: fixed; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% ,-50%);
+  padding: 35px;
+  z-Index: 2;
+  position: absolute;
+  /* height: 40vw;
+   width: 40vw; */
+}
+
+
+
+/* ===========Button work area End ============= */
+
+
+
+/* 
+@media screen and (max-width: 480px){
+ .modal {
+  position:fixed;
+  top: 50%;
+  left: 50%;
+ 
+  width: 100px;
+  max-width: 100%;
+  
+  }
+} */
+
+
 
 /* @media screen and (max-width: 480px){
     #timerElements {
