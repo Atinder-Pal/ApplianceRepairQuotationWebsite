@@ -4,9 +4,10 @@ article {
     margin:5vh auto;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom:3vh;
     
-    /* background-color: #F2D6B3; */
-    background-image: url("../../img/landing/texture.jpg");
+    background-color: #F2D6B399;
+    /* background-image: url("../../img/landing/texture.jpg"); */
     
 }
 
@@ -38,12 +39,12 @@ article section {
     padding-left:0.5rem;
     padding-right:0.5rem;
     margin-bottom:0;
-    background: linear-gradient(90deg, rgba(54,200,217,1) 0%, rgba(34,162,242,1) 100%);
+    background: linear-gradient(90deg, rgba(54,200,217,1) 0%, rgba(34,162,242,1) 46%);
 }  
 
 table,td {
-border: 1px solid peachpuff;
-background-color: white;
+/* border: 1px solid peachpuff; */
+background-color:#fff;
 }
 
 td {
@@ -52,9 +53,11 @@ td {
     text-align:left;
     height:5vh;
 }
-
+table tr:nth-child(odd) td {
+    background-color: #97A3A655;
+}
 tr td:first-of-type {
-    background-color: powderblue;
+    /* background-color: #F2BB1355; */
     font-weight: 500;
 }
 table tr:last-of-type {
@@ -69,11 +72,11 @@ margin:0 auto 3vh auto;
 
 .pdfButton {
 display:block;
-margin:3vh auto 0 auto;
+margin:3vh auto 2vh auto;
 padding: 0.5rem;
 font-size: 0.9rem; 
 font-weight: 500;
-background-color: peru; 
+background-color: #D96523; 
 }
 
 
