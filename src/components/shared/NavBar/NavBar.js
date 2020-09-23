@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import styles from "./NavBar.module.css";
 import {
   MDBNavbar,
   MDBNavbarBrand,

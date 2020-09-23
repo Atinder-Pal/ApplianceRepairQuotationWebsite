@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "./ApplianceRepair.module.css";
-import cx from "classnames";
 import { useDispatch } from "react-redux";
 import { quote } from "../../actions/repair";
 import { useHistory } from "react-router-dom";
@@ -22,8 +21,6 @@ const ApplianceRepair = () => {
   const [issueValue, setIssueValue] = useState("");
   const [nameValue, setNameValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
-  const [showMessage1, setShowMessage1] = useState(false);
-  const [showMessage2, setShowMessage2] = useState(false);
 
   // const handleChangeCategory = (e) => {
   //   setCategoryValue(e.target.value);
@@ -33,15 +30,9 @@ const ApplianceRepair = () => {
   };
 
   const handleChangeName = (e) => {
-    if (!e.target.value) {
-      setShowMessage1(true);
-    }
     setNameValue(e.target.value);
   };
   const handleChangeEmail = (e) => {
-    if (!e.target.value) {
-      setShowMessage2(true);
-    }
     setEmailValue(e.target.value);
   };
 
