@@ -14,7 +14,7 @@ const QuotationForm = () => {
   const printDocument =(e) => {
     e.preventDefault();
     const input = document.getElementById('downloadableForm');
-    html2canvas(input).then((canvas) => {
+    html2canvas(input, {scrollY: -window.scrollY}).then((canvas) => {
         const imgData = canvas.toDataURL('image/png');
         const pdf = new jsPDF();
         pdf.addImage(imgData, 'JPEG', 0, 0);        

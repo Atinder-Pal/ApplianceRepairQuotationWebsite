@@ -6,7 +6,7 @@ article {
     margin-right: auto;
     padding-bottom:3vh;
     
-    background-color: #F2D6B399;
+    background-color: #F2D6B3f2;
     /* background-image: url("../../img/landing/texture.jpg"); */
     
 }
@@ -54,7 +54,8 @@ td {
     height:5vh;
 }
 table tr:nth-child(odd) td {
-    background-color: #97A3A655;
+    /* background-color: #97A3A655; */
+    background-color: #36C8D944;
 }
 tr td:first-of-type {
     /* background-color: #F2BB1355; */
