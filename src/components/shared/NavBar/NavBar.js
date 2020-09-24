@@ -22,7 +22,7 @@ const NavBar = () => {
       </MDBNavbarBrand>
       <MDBNavbarToggler onClick={toggleCollapse} />
       <MDBCollapse id="navbarCollapse3" isOpen={isOpen} navbar>
-        <MDBNavbarNav left>
+        <MDBNavbarNav center>
           <MDBNavItem>
             <MDBNavLink to="/">Home</MDBNavLink>
           </MDBNavItem>

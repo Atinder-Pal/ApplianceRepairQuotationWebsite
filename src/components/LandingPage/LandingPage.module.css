@@ -18,7 +18,7 @@ body {
 .grid{
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 600px 650px;
+  grid-template-rows: 569px 569px;
   grid-template-areas: "imgArea" 
                       "timerArea"
                       ;
@@ -44,25 +44,26 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: none;
+  /* color: none; */
   width: 100vw;
   height: 100vh;
 }
+
 .top {
   background-image: url("../../img/landing/lg-laundr2.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: none;
+  /* color: none; */
   width: 100vw;
   height: 100vh;
 }
 
 #cf {
   position:relative;
-  /* height:281px;
-  width:450px; */
+  /* height:700px;
+  width:750px; */
   margin:0 auto;
 }
 
@@ -78,6 +79,7 @@ body {
 #cf img.top:hover {
   opacity:0;
 }
+
 /* =========Fade in Pictures kitchen ends========== */
 
 /* ==========Timer Elements CSS stats ============= */
@@ -229,6 +231,8 @@ section p:first-child,
   align-items: center;
   
 } */
+
+
 .container {
   width: 400px;
   height: 400px;
@@ -239,11 +243,13 @@ section p:first-child,
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 .center {
   width: 180px;
   height: 60px;
   position: absolute;
+  
 }
 
 .button {
@@ -289,7 +295,8 @@ svg {
 .button span {
   color: white;
   font-size: 18px;
-  font-weight: 100;
+  font-weight: 800;
+  /* background-color: rgba(0, 0, 0, 0.6); */
 }
 
 #modal {
@@ -326,10 +333,10 @@ svg {
 @media screen and (min-width: 750px)
 {
  .grid {
+   
     grid-template-columns: 50% 50%;
-    grid-template-rows: 1000px;
-    grid-template-areas: "imgArea" "timerArea"
-                        "imgArea" "timerArea";
+    grid-template-rows: 820px;
+    grid-template-areas: "imgArea" "timerArea";
   }
 
   p {
