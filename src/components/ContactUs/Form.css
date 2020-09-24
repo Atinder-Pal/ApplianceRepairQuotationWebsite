@@ -6,3 +6,13 @@
   .inputError {
     border-color: red;
   }
+
+  .centered {
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+
+ 
