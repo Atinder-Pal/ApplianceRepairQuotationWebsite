@@ -1,22 +1,13 @@
-.danger {
-  color: #ff0000;
+.repairPage {
+  margin: 5vh auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 7vh;
 }
 
-.applianceRepair {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.fillForm {
+  font-size: 20px;
 }
-
-.repairForm {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  justify-content: center;
-  align-items: center;
-}
-
 .brandSelect {
   margin-bottom: 1rem;
 }
