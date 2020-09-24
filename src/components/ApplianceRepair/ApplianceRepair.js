@@ -152,7 +152,10 @@ const ApplianceRepair = () => {
 
   return (
     <>
-      <MDBContainer>
+      <MDBContainer className={styles.repairPage}>
+        <p className={`${styles.fillForm} text-center font-weight-bold`}>
+          Please fill out the form below and get your quotation
+        </p>
         <form onSubmit={handleSubmit}>
           <MDBRow>
             <MDBCol
