@@ -1,6 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./LandingPage.module.css";
 import Modal from "./Modal";
+import {
+  MDBNavbar,
+  MDBNavbarBrand,
+  MDBNavbarNav,
+  MDBNavItem,
+  MDBNavLink,
+  MDBNavbarToggler,
+  MDBCollapse,
+  MDBIcon,
+} from "mdbreact";
 
 const LandingPage = () => {
 

@@ -9,6 +9,7 @@ import {
   MDBCollapse,
   MDBIcon,
 } from "mdbreact";
+import logo from "../../../img/landing/logo-makr.png"
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,9 +17,9 @@ const NavBar = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <MDBNavbar color="default-color" dark expand="md">
+    <MDBNavbar color="#00897b teal darken-1" dark expand="md">
       <MDBNavbarBrand>
-        <strong className="white-text">ApplianceMaster</strong>
+        <strong className="white-text"><img src={logo} height="50" />ApplianceMaster</strong>
       </MDBNavbarBrand>
       <MDBNavbarToggler onClick={toggleCollapse} />
       <MDBCollapse id="navbarCollapse3" isOpen={isOpen} navbar>

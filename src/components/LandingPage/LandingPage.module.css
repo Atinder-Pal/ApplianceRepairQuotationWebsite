@@ -330,7 +330,7 @@ svg {
 
 /* ================ Media query ================= */
 
-/* @media screen and (min-width: 750px)
+@media screen and (min-width: 750px)
 {
  .grid {
    
@@ -342,7 +342,7 @@ svg {
   p {
     font-size: 30px;
   }
-}  */
+} 
 
 /* position:fixed;
     top: 50%;
