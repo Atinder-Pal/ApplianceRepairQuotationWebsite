@@ -1,14 +1,14 @@
+article img {
+    height:4vh;
+}
 
 article {
     width:96%;    
     margin:5vh auto;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom:3vh;
-    
-    background-color: #97A3A644;
-    /* background-image: url("../../img/landing/texture.jpg"); */
-    
+    padding-bottom:3vh;    
+    background-color: #D9D9D966;   
 }
 
 article div {
@@ -27,11 +27,8 @@ img {
 article h2 {
     text-align:center;
     color:#fff;
-    font-size:1.25rem;
-    font-weight: 900;    
-  /* -webkit-text-fill-color: #F2BB13; 
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #D96523; */
+    font-size:1.14rem;
+    font-weight: 900;   
 }
 
 article section {
@@ -41,18 +38,15 @@ article section {
     padding-left:0.5rem;
     padding-right:0.5rem;
     margin-bottom:0;
-    /* background: linear-gradient(90deg, rgba(54,200,217,1) 0%, rgba(44,191,164,1) 46%); */
-    background-color: #D96523;
+    background-color: #00897B;      
 }  
+
 table {
     border-collapse: collapse;
     width:100%;
     margin:0 auto 3vh auto;
 }
-table,td {
-    border: 1px solid #000;
-    /* background-color: white; */
-    }
+
 table td {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -62,42 +56,44 @@ table td {
     background-color:#fff;    
 }
 
-table tr:nth-child(even) td {
-    
-    background-color:#97A3A6AA;
+table tr:nth-child(even) td {    
+    background-color:#A7D9D066;
 }
 
-tr td:first-of-type {
-    /* background-color: #97A3A6AA;  */
+tr td:first-of-type {   
     font-weight: 900;
 }
 
 tr td:last-of-type {
-    font-weight: 400;
+    font-weight: 450;
 }
+
 table tr:last-of-type {    
     border-style: groove;
-    border:0.4rem solid #000; 
-          
+    border:0.4rem solid #00897B;           
+}
+
+table tr:last-of-type td {
+    font-size:large;
+    font-weight:500;
 }
 
 .pdfButton {
-display:block;
-margin:3vh auto 2vh auto;
-padding: 0.5rem;
-font-size: 0.9rem; 
-font-weight: 500;
-background-color: #D96523; 
-color:#fff;
+    display:block;
+    margin:3vh auto 2vh auto;
+    padding: 0.5rem;
+    font-size: 0.9rem; 
+    font-weight: 500;
+    background-color: #22A2F2; 
+    color:#fff;
+    box-shadow:5px 10px #888888;
+    transition-duration: 0.4s;
 }
 
-/* article p {
-    font-size: x-large;
-    text-align: center;
-    color: red;
-    font-weight: bolder;
-    font-style: italic;
-} */
+.pdfButton:hover {
+    background-color:#22A2F255;
+    color: #000;
+}
 
 
 @media screen and (min-width:760px) {
@@ -124,6 +120,11 @@ color:#fff;
         font-size: large;      
     }
 
+    table tr:last-of-type td {
+        font-size:x-large;
+        font-weight:500;
+    }
+
     .pdfButton {
         font-size: large;
         padding:0.8rem;
@@ -132,6 +133,10 @@ color:#fff;
 
 
 @media screen and (min-width:1024px) {
+    article img {
+        height:7.5vh;
+    }
+    
     article {
         width:70%;        
     }   
