@@ -319,7 +319,7 @@ svg {
 
 /* ================ Media query ================= */
 
-@media screen and (min-width: 760px)
+/* @media screen and (min-width: 760px)
 {
  .grid {
     grid-template-columns: 50% 50%;
@@ -327,7 +327,7 @@ svg {
     grid-template-areas: 
     "imgArea" "timerArea";
   }
-}
+} */
 
 /* position:fixed;
     top: 50%;

@@ -1,9 +1,10 @@
 
 
 import React from 'react';
-import useForm from "./useForm";
+import useForm from './useForm';
 import validate from "./validateForm";
 
+import './Form.css';
 import emailjs from 'emailjs-com';
 import apiKeys from './apikeys';
 
@@ -16,7 +17,7 @@ const Form = () => {
                 alert('Message Sent, I\'ll get back to you shortly', result.text);
             },
                 error => {
-                    alert('An error occured, Plese try again', error.text)
+                    alert('An error occured, Please try again', error.text)
                 })
          console.log("Submitted Successfully");
     }
