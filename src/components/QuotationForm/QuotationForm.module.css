@@ -6,7 +6,7 @@ article {
     margin-right: auto;
     padding-bottom:3vh;
     
-    background-color: #F2BB1344;
+    background-color: #97A3A644;
     /* background-image: url("../../img/landing/texture.jpg"); */
     
 }
@@ -15,8 +15,9 @@ article div {
     width:98%;
     height:98%;
     margin:0 auto;
-    /* padding-top:0.2vh; */
-    padding: 2rem;
+    padding-top:0.2vh; 
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
 
 img {
@@ -25,12 +26,12 @@ img {
 
 article h2 {
     text-align:center;
-    /* color:#F2BB13; */
+    color:#fff;
     font-size:1.25rem;
     font-weight: 900;    
-  -webkit-text-fill-color: #F2BB13; /* Will override color (regardless of order) */
+  /* -webkit-text-fill-color: #F2BB13; 
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #D96523;
+  -webkit-text-stroke-color: #D96523; */
 }
 
 article section {
@@ -40,13 +41,18 @@ article section {
     padding-left:0.5rem;
     padding-right:0.5rem;
     margin-bottom:0;
-    background: linear-gradient(90deg, rgba(54,200,217,1) 0%, rgba(34,162,242,1) 46%);
+    /* background: linear-gradient(90deg, rgba(54,200,217,1) 0%, rgba(44,191,164,1) 46%); */
+    background-color: #D96523;
 }  
 table {
     border-collapse: collapse;
     width:100%;
     margin:0 auto 3vh auto;
 }
+table,td {
+    border: 1px solid #000;
+    /* background-color: white; */
+    }
 table td {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -56,25 +62,24 @@ table td {
     background-color:#fff;    
 }
 
-table tr:nth-child(odd) td {
-    /* background-color: #97A3A655; */
-    background-color: #36C8D944;
+table tr:nth-child(even) td {
+    
+    background-color:#97A3A6AA;
 }
 
 tr td:first-of-type {
-    /* background-color: #F2BB1355; */
+    /* background-color: #97A3A6AA;  */
     font-weight: 900;
 }
 
 tr td:last-of-type {
     font-weight: 400;
 }
-table tr:last-of-type {
+table tr:last-of-type {    
     border-style: groove;
-    
+    border:0.4rem solid #000; 
+          
 }
-
-
 
 .pdfButton {
 display:block;
@@ -83,7 +88,16 @@ padding: 0.5rem;
 font-size: 0.9rem; 
 font-weight: 500;
 background-color: #D96523; 
+color:#fff;
 }
+
+/* article p {
+    font-size: x-large;
+    text-align: center;
+    color: red;
+    font-weight: bolder;
+    font-style: italic;
+} */
 
 
 @media screen and (min-width:760px) {
