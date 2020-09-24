@@ -1,24 +1,157 @@
-.quotationForm {
-    margin: 9vh auto;
-    border:0.1rem solid black;
-    width:30%;
-    padding:2rem 3rem;    
+
+article {
+    width:96%;    
+    margin:5vh auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom:3vh;
+    
+    background-color: #97A3A644;
+    /* background-image: url("../../img/landing/texture.jpg"); */
+    
 }
 
-.quoteHeading {
-    text-align: center;;
-}
-
-.pdfButton{
-    display:block;
+article div {
+    width:98%;
+    height:98%;
     margin:0 auto;
-    padding: 1rem;
-    font-size: 1.2rem;
+    padding-top:0.2vh; 
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
-.quotationForm span {
-    margin-left: 1rem;    
+
+img {
+    float: left;    
 }
-.quotationForm p:last-of-type {
-    background-color:#f5f5f5;
-    padding: 0.5rem 0;
+
+article h2 {
+    text-align:center;
+    color:#fff;
+    font-size:1.25rem;
+    font-weight: 900;    
+  /* -webkit-text-fill-color: #F2BB13; 
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #D96523; */
 }
+
+article section {
+    margin-top: 5vh;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    padding-left:0.5rem;
+    padding-right:0.5rem;
+    margin-bottom:0;
+    /* background: linear-gradient(90deg, rgba(54,200,217,1) 0%, rgba(44,191,164,1) 46%); */
+    background-color: #D96523;
+}  
+table {
+    border-collapse: collapse;
+    width:100%;
+    margin:0 auto 3vh auto;
+}
+table,td {
+    border: 1px solid #000;
+    /* background-color: white; */
+    }
+table td {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align:left;
+    height:5vh;
+    font-weight: bolder;
+    background-color:#fff;    
+}
+
+table tr:nth-child(even) td {
+    
+    background-color:#97A3A6AA;
+}
+
+tr td:first-of-type {
+    /* background-color: #97A3A6AA;  */
+    font-weight: 900;
+}
+
+tr td:last-of-type {
+    font-weight: 400;
+}
+table tr:last-of-type {    
+    border-style: groove;
+    border:0.4rem solid #000; 
+          
+}
+
+.pdfButton {
+display:block;
+margin:3vh auto 2vh auto;
+padding: 0.5rem;
+font-size: 0.9rem; 
+font-weight: 500;
+background-color: #D96523; 
+color:#fff;
+}
+
+/* article p {
+    font-size: x-large;
+    text-align: center;
+    color: red;
+    font-weight: bolder;
+    font-style: italic;
+} */
+
+
+@media screen and (min-width:760px) {
+
+    article {
+        width:90%;        
+    }
+
+    article div {
+        width:500px;        
+        margin:0 auto 0 auto;
+        padding-top:0.2vh;
+    }
+
+    article h2 {
+        font-size: 1.5rem;
+    }
+
+    table tr td {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        text-align:left;
+        height:5vh;  
+        font-size: large;      
+    }
+
+    .pdfButton {
+        font-size: large;
+        padding:0.8rem;
+    }  
+}
+
+
+@media screen and (min-width:1024px) {
+    article {
+        width:70%;        
+    }   
+
+    article div {
+        width:85%;        
+        margin:0 auto 0 auto;
+        padding-top:0.8vh;
+    }
+
+    table tr td {        
+        height:7vh; 
+        font-size: larger;            
+    } 
+
+    article h2 {
+        font-size: 2rem;
+    }
+}
+
+
+
+
