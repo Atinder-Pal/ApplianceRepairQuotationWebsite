@@ -4,6 +4,7 @@ import jsPDF from "jspdf";
 import html2canvas from 'html2canvas';
 import styles from "./QuotationForm.module.css";
 import { MDBIcon } from "mdbreact";
+import logo from "../../img/landing/logo-makr.png"
 
 const QuotationForm = () => {
   const quoteInfo = useSelector(state => state.repair);
@@ -28,7 +29,7 @@ const QuotationForm = () => {
         {/* <h2> Quotation Form</h2> */}
         <div id='downloadableForm' className={styles.quotationForm}>
         <section>
-          <img src="" alt="Company Logo"/>
+          <img src={logo} height="50" alt="Company Logo"/>
           <h2>Appliance Repair Quote <MDBIcon icon="file-invoice-dollar" /></h2>
         </section>
         <table>
