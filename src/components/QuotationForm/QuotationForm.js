@@ -13,17 +13,18 @@ const QuotationForm = () => {
   //https://stackoverflow.com/questions/44989119/generating-a-pdf-file-from-react-components
   const printDocument =(e) => {
     e.preventDefault();
+       
     const input = document.getElementById('downloadableForm');
-    html2canvas(input, {scrollY: -window.scrollY}).then((canvas) => {
-        const imgData = canvas.toDataURL('image/png');
+    html2canvas(input, { scale:1 }).then((canvas) => {        
+        const imgData = canvas.toDataURL('image/png', 1.0);
         const pdf = new jsPDF();
-        pdf.addImage(imgData, 'JPEG', 0, 0);        
+        pdf.addImage(imgData, 'PNG', 29, 20, 150, 100);        
         pdf.save("quote.pdf");
       });
   //End Citation
   }
   return (    
-      <article>
+      <article  >
         {/* <h2> Quotation Form</h2> */}
         <div id='downloadableForm' className={styles.quotationForm}>
         <section>

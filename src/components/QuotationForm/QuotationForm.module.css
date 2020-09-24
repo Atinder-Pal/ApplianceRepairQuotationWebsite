@@ -6,7 +6,7 @@ article {
     margin-right: auto;
     padding-bottom:3vh;
     
-    background-color: #F2D6B3f2;
+    background-color: #F2BB1344;
     /* background-image: url("../../img/landing/texture.jpg"); */
     
 }
@@ -15,7 +15,8 @@ article div {
     width:98%;
     height:98%;
     margin:0 auto;
-    padding-top:0.2vh;
+    /* padding-top:0.2vh; */
+    padding: 2rem;
 }
 
 img {
@@ -41,35 +42,39 @@ article section {
     margin-bottom:0;
     background: linear-gradient(90deg, rgba(54,200,217,1) 0%, rgba(34,162,242,1) 46%);
 }  
-
-table,td {
-/* border: 1px solid peachpuff; */
-background-color:#fff;
+table {
+    border-collapse: collapse;
+    width:100%;
+    margin:0 auto 3vh auto;
 }
-
-td {
+table td {
     padding-left: 1rem;
     padding-right: 1rem;
     text-align:left;
     height:5vh;
+    font-weight: bolder;
+    background-color:#fff;    
 }
+
 table tr:nth-child(odd) td {
     /* background-color: #97A3A655; */
     background-color: #36C8D944;
 }
+
 tr td:first-of-type {
     /* background-color: #F2BB1355; */
-    font-weight: 500;
+    font-weight: 900;
+}
+
+tr td:last-of-type {
+    font-weight: 400;
 }
 table tr:last-of-type {
     border-style: groove;
+    
 }
 
-table {
-border-collapse: collapse;
-width:100%;
-margin:0 auto 3vh auto;
-}
+
 
 .pdfButton {
 display:block;
@@ -88,7 +93,7 @@ background-color: #D96523;
     }
 
     article div {
-        width:85%;        
+        width:500px;        
         margin:0 auto 0 auto;
         padding-top:0.2vh;
     }
