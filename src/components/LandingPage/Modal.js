@@ -21,7 +21,7 @@ import styles from "./LandingPage.module.css";
   // console.log(randomItem);
   // const [randomItem, setIsOpen] = useState();
 
-//chidren just UUID: 123456789 for now
+//chidren just for random code: 123456789 for now
 export default function Modal({ open, children, onClose}){
     if (!open) return null
     const myArray = [

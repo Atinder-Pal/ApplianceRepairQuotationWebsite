@@ -1,4 +1,4 @@
-/* *{ outline: .1px solid #ff0000 !important; }  */
+*{ outline: .1px solid #ff0000 !important; } 
 
 @font-face {
   font-family: "Roboto_Mono";
@@ -18,8 +18,8 @@ body {
 .grid{
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 600px 650px 1px;
-  grid-template-areas: "imgArea" "timerArea" "btnArea";
+  grid-template-rows: 600px 650px;
+  grid-template-areas: "imgArea" "timerArea";
 
 }
 
@@ -29,9 +29,9 @@ body {
 .timerContainer {
   grid-area: timerArea;
 }
-.container {
+/* .container {
   grid-area: btnArea;
-}
+} */
 
 /* ============= Grid Layout ends =================== */
 /* =========Fade in Pictures kitchen starts========== */
@@ -317,21 +317,23 @@ svg {
 /* ===========Button work area End ============= */
 
 
+/* ================ Media query ================= */
 
-/* 
-@media screen and (max-width: 480px){
- .modal {
-  position:fixed;
-  top: 50%;
-  left: 50%;
- 
-  width: 100px;
-  max-width: 100%;
-  
+@media screen and (min-width: 760px)
+{
+ .grid {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1000px;
+    grid-template-areas: 
+    "imgArea" "timerArea";
   }
-} */
+}
 
-
+/* position:fixed;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    max-width: 100%; */
 
 /* @media screen and (max-width: 480px){
     #timerElements {

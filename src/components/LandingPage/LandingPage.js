@@ -42,12 +42,12 @@ const LandingPage = () => {
         }, 1000);
     };
 // now call our method startTimer and return clearInterval function 
-    useEffect(() => {
-      startTimer();
-      return () => {
-          clearInterval(period.current);
-      };
-  })
+  //   useEffect(() => {
+  //     startTimer();
+  //     return () => {
+  //         clearInterval(period.current);
+  //     };
+  // })
 // =====Timer Logic ends here=============
 
 //isOpen for Modal
@@ -58,8 +58,8 @@ const [isOpen, setIsOpen] = useState(false)
     {/* ==========Fade in Pictures block============ */}
     <div className={styles.crossFade}>
       <div id={styles.cf}>
-        <img className={styles.bottom}  alt="kitchen1"/>
-        <img className={styles.top}  alt="lg-laundry" />
+        <img className={styles.bottom} />
+        <img className={styles.top} />
       </div>
     </div>
     {/* ===========Timer block========== */}
@@ -111,7 +111,7 @@ const [isOpen, setIsOpen] = useState(false)
    
   </section>
   );
-  // ========Return Lending ends==========
+  // ========Return Landing ends==========
 };
 
 export default LandingPage;
