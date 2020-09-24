@@ -42,12 +42,12 @@ const LandingPage = () => {
         }, 1000);
     };
 // now call our method startTimer and return clearInterval function 
-  //   useEffect(() => {
-  //     startTimer();
-  //     return () => {
-  //         clearInterval(period.current);
-  //     };
-  // })
+    useEffect(() => {
+      startTimer();
+      return () => {
+          clearInterval(period.current);
+      };
+  })
 // =====Timer Logic ends here=============
 
 //isOpen for Modal

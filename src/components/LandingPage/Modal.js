@@ -25,10 +25,7 @@ import styles from "./LandingPage.module.css";
 export default function Modal({ open, children, onClose}){
     if (!open) return null
     const myArray = [
-        "123456789",
-        "abcdefg",
-        "frt03049fdf",
-        "be4ir75ut9"
+        "BX4TR75YZ9"
       ];
     const randomItem = myArray[Math.floor(Math.random()*myArray.length)];
  
