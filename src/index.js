@@ -27,7 +27,13 @@ ReactDOM.render(
         <NavBar />
         <Switch>
           <Route path="/" exact component={LandingPage} />
-          <Route path="/appliancerepair" exact component={ApplianceRepair} />
+          <Route
+            path="/appliancerepair"
+            exact
+            component={() => (
+              <ApplianceRepair someText="Please fill out the form below and get your quotation" />
+            )}
+          />
           <Route path="/quotation" exact component={QuotationForm} />
           <Route path="/contact" exact component={ContactUs} />
         </Switch>

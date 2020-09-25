@@ -1,11 +1,8 @@
-.error{
-    color: red;
-    font-size: 10 px;
-  }
-  
-  .inputError {
-    border-color: red;
-  }
+.error {
+  color: red;
+  font-size: 10 px;
+}
+
 
   .centered {
     /* height: 100vh; */
@@ -23,4 +20,9 @@
   
   }
 
- 
+.inputError {
+  border-color: red;
+}
+
+
+

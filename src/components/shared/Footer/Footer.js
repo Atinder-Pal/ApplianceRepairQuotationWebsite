@@ -8,7 +8,9 @@ const Footer = () => {
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
           <MDBCol md="6">
-            <p>Best Appliance Repair Company in Edmonton</p>
+            <p className={styles.description}>
+              Best Appliance Repair Company in Edmonton
+            </p>
           </MDBCol>
           <MDBCol md="6">
             <ul>
