@@ -1,18 +1,15 @@
-.error{
-    color: red;
-    font-size: 10 px;
-  }
-  
-  .inputError {
-    border-color: red;
-  }
+.error {
+  color: red;
+  font-size: 10 px;
+}
 
-  .centered {
-    /* height: 100vh; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-  }
+.inputError {
+  border-color: red;
+}
 
- 
+.centered {
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
