@@ -1,18 +1,30 @@
 .each-slide > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    height: 300px;
-  }
-  .each-slide span {
-    padding: 20px;
-    font-size: 20px;
-    background: #EFEFEF;
-    text-align: center;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 300px;
+}
+.each-slide span {
+  padding: 20px;
+  font-size: 20px;
+  background: #efefef;
+  text-align: center;
+}
 
-  /* .each-slide2 {
+.showImg1 {
+  background-image: url("./Images/img1.jpg");
+}
+.showImg2 {
+  background-image: url("./Images/img2.jpg");
+}
+.showImg3 {
+  background-image: url("./Images/img3.jpg");
+}
+.showImg4 {
+  background-image: url("./Images/img4.jpg");
+}
+/* .each-slide2 {
     background-image: url(./Images/img2.jpg);
   }
 
@@ -27,4 +39,3 @@
   .each-slide4 {
     background-image: url(./Images/img4.jpg);
   } */
-  
