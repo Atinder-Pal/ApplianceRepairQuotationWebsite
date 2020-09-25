@@ -20,7 +20,7 @@ const NavBar = () => {
     <MDBNavbar color="#00897b teal darken-1" dark expand="md">
       <MDBNavbarBrand>
         <strong className="white-text">
-          <img src={logo} height="50" />
+          <img src={logo} height="30" />
           ApplianceMaster
         </strong>
       </MDBNavbarBrand>
