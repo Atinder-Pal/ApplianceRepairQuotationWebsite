@@ -21,7 +21,7 @@ const store = createStore(
 );
 
 ReactDOM.render(
-  <React.StrictMode>
+  <React.Fragment>
     <Provider store={store}>
       <Router>
         <NavBar />
@@ -34,6 +34,6 @@ ReactDOM.render(
         <Footer />
       </Router>
     </Provider>
-  </React.StrictMode>,
+  </React.Fragment>,
   document.getElementById("root")
 );

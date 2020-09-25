@@ -53,10 +53,18 @@ const LandingPage = () => {
     };
 // now call our method startTimer and return clearInterval function 
     useEffect(() => {
+      // added let mount=true; for fixing unmounted rendering issue
+      let mounted = true;
       startTimer();
       return () => {
+        // added if(mounted){} for fixing state update on an unmounted component
+       if(mounted){
           clearInterval(period.current);
+        } 
+        mounted = false;
       };
+      // added  return() => mounted = false; for fixing update issue on unmouned component
+     return() => mounted = false; 
   })
 // =====Timer Logic ends here=============
 
