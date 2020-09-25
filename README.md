@@ -90,6 +90,38 @@ https://upmostly.com/tutorials/modal-components-react-custom-hooks
 ## Wave Gif by Evan Hilton
 https://giphy.com/gifs/wave-waves-surf-3og0IwoOyuY3ug4xaM
 
+## Build an interactive Google Map 
+https://www.youtube.com/watch?v=Pf7g32CwX_s
+
+## Fragments 
+https://reactjs.org/docs/fragments.html
+
+## Issue with Legasy content was fixed using this link
+https://stackoverflow.com/questions/61647771/react-reactstrap-warning-legacy-context-api-has-been-detected-within-a-strict
+
+## Issue with an Update on unmounted component was fixed using this link
+https://www.debuggr.io/react-update-unmounted-component/
+
+## Images of desk
+Photo by Karolina Grabowska from Pexels
+https://www.pexels.com/photo/opened-notebook-and-silver-pen-4195330/
+
+Photo by FWStudio from Pexels
+https://www.pexels.com/photo/abstract-antique-background-board-172277/
+
+Photo by Lukas from Pexels
+https://www.pexels.com/@goumbik
+
+
+**Installs**
+
+## Google map 
+``` npm install --save react-google-maps ```
+
+
+
+
+
 
 
 
