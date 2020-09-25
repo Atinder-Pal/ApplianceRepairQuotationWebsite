@@ -13,7 +13,7 @@ import {
   MDBCol,
 } from "mdbreact";
 
-const ApplianceRepair = () => {
+const ApplianceRepair = (props) => {
   const dispatch = useDispatch();
   const history = useHistory();
   const [categoryValue, setCategoryValue] = useState("");
@@ -154,7 +154,7 @@ const ApplianceRepair = () => {
     <>
       <MDBContainer className={styles.repairPage}>
         <p className={`${styles.fillForm} text-center font-weight-bold`}>
-          Please fill out the form below and get your quotation
+          {props.someText}
         </p>
         <form onSubmit={handleSubmit}>
           <MDBRow>
