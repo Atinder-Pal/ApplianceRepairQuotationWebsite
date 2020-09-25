@@ -3,6 +3,10 @@ import styles from "./ContactUs.module.css";
 import cx from "classnames";
 import Form from "./Form";
 import Slide from './Slide';
+// olegs imports
+import Map from './Map';
+import './Map.module.css';
+//olegs imports
 
 
 const ContactUs = () => {
@@ -11,6 +15,8 @@ const ContactUs = () => {
       
       <Slide />
       <Form/>
+      {/* olegs map */}
+      <Map />
     </>
   );
 };
