@@ -1,16 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./LandingPage.module.css";
 import Modal from "./Modal";
-import {
-  MDBNavbar,
-  MDBNavbarBrand,
-  MDBNavbarNav,
-  MDBNavItem,
-  MDBNavLink,
-  MDBNavbarToggler,
-  MDBCollapse,
-  MDBIcon,
-} from "mdbreact";
+
 
 const LandingPage = () => {
 
@@ -40,7 +31,7 @@ const LandingPage = () => {
                 //use clearInterval to stop the timer
                 if (distance < 0)
                 {
-                    clearInterval(period.current);
+                    clearInterval(period);
                 }
                 //if clock still ticking then assign new values to our hooks
                 else {
@@ -53,11 +44,28 @@ const LandingPage = () => {
     };
 // now call our method startTimer and return clearInterval function 
     useEffect(() => {
-      startTimer();
+      // added let mount=true; for fixing unmounted rendering issue
+      let mounted = true;
+      // Warning would always comeup during clearing variab and 
+      // console would say: "Can't perform a React state update on an unmounted component. 
+      // This is a no-op, but it indicates a memory leak in your application. 
+      // To fix, cancel all subscriptions and asynchronous tasks in a useEffect cleanup function."
+      // to fix this issue 1) go here https://www.debuggr.io/react-update-unmounted-component/
+      // and 2) create mounted variable to hold boolean value 3) if statment to render state only if changed
+      // 4) return mounted = false after clearing variable period. 5) then make sure you dont have clearInterval(period.current) 
+      // because it clears wrong variable . You need to clear period not period.current.
+      if(mounted) {
+        startTimer()
+      }
       return () => {
-          clearInterval(period.current);
-      };
-  })
+        // added if(mounted){} for fixing state update on an unmounted component
+       if(mounted){
+          clearInterval(period);
+        } 
+        mounted = false;
+      };  
+  }) 
+  
 // =====Timer Logic ends here=============
 
 //isOpen for Modal

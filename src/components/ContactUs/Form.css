@@ -3,13 +3,26 @@
   font-size: 10 px;
 }
 
+
+  .centered {
+    /* height: 100vh; */
+    background-image: url('./Images/desk1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+
 .inputError {
   border-color: red;
 }
 
-.centered {
-  /* height: 100vh; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
+
