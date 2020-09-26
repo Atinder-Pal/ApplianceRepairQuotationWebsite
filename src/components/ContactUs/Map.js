@@ -16,7 +16,7 @@ function getJSONMarkers()
     return markers;
   }
 
-//========== Face JSON call Data ends =========//
+//========== Fake JSON call Data ends =========//
 
 function Maap(){
     // Hook
@@ -82,6 +82,5 @@ export default function Map() {
             />
         </div>
     </div>
-    
     );
 }

@@ -11,17 +11,14 @@ export default function Modal({ open, children, onClose}){
       ];
     const randomItem = myArray[Math.floor(Math.random()*myArray.length)];
  
-
     return ReactDom.createPortal(
         <>
-        
         <div id={styles.modal}>
             <button onClick={onClose}>x</button>
             {children}
             <div>CODE: </div>
             <div>{randomItem}</div>
         </div>
-        
         </>,
         document.getElementById('portal')
     )
