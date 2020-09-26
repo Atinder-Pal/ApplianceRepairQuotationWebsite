@@ -29,7 +29,7 @@ const QuotationForm = () => {
         {/* <h2> Quotation Form</h2> */}
         <div id='downloadableForm' className={styles.quotationForm}>
         <section>
-          <img src={logo} height="50" alt="Company Logo"/>
+          <img src={logo} alt="Company Logo"/>
           <h2>Appliance Repair Quote <MDBIcon icon="file-invoice-dollar" /></h2>
         </section>
         <table>
@@ -63,8 +63,7 @@ const QuotationForm = () => {
                 <td>${ quoteInfo.newQuotation.price }</td>              
               </tr>              
             </tbody>              
-          </table> 
-          {/* <p>Your Quotation is:${ quoteInfo.newQuotation.price } </p>          */}
+          </table>           
         </div>
         <button className={styles.pdfButton} onClick={printDocument}>Download PDF <MDBIcon far icon="file-pdf" /></button>
       </article>   
