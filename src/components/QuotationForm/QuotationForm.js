@@ -25,8 +25,8 @@ const QuotationForm = () => {
   //End Citation
   }
   return (    
-      <article  >
-        {/* <h2> Quotation Form</h2> */}
+      <article  > 
+        <h2 className={styles.screenReaderText}>Quotation Form</h2>      
         <div id='downloadableForm' className={styles.quotationForm}>
         <section>
           <img src={logo} alt="Company Logo"/>
