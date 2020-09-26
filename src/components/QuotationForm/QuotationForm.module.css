@@ -1,3 +1,21 @@
+/* Text meant only for screen readers. */
+/* Citation */
+/* https://make.wordpress.org/accessibility/handbook/markup/the-css-class-screen-reader-text/ */
+.screenReaderText {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+}
+/* End Citation */
+
+/* Set height for LOGO in the Quotation Form */
 article img {
     height:4vh;
 }
@@ -11,6 +29,7 @@ article {
     background-color: #D9D9D966;   
 }
 
+/* Setting layout for Downloadable Form */
 article div {
     width:98%;
     height:98%;
@@ -65,7 +84,7 @@ tr td:first-of-type {
 }
 
 tr td:last-of-type {
-    font-weight: 450;
+    font-weight: 400;
 }
 
 table tr:last-of-type {    
@@ -95,7 +114,7 @@ table tr:last-of-type td {
     color: #000;
 }
 
-
+/* Making some changes in Font size and width of elements for Screen size greater than phones */
 @media screen and (min-width:760px) {
 
     article {
@@ -131,7 +150,7 @@ table tr:last-of-type td {
     }  
 }
 
-
+/* Making some changes in Font size and width of elements for Screen size greater than tablets */
 @media screen and (min-width:1024px) {
     article img {
         height:7.5vh;
