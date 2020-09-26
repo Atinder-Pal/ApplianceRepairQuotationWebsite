@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "./LandingPage.module.css";
 import Modal from "./Modal";
 
-
 const LandingPage = () => {
 
 //==========Timer Logic starts here==========
@@ -78,7 +77,6 @@ const [isOpen, setIsOpen] = useState(false)
       <div id={styles.cf}>
         <img className={styles.bottom} alt=""/>
         <img className={styles.top} alt=""/>
-        {/* <img className={styles.mid} /> */}
       </div>
     </div>
     {/* ===========Timer block========== */}
@@ -122,8 +120,8 @@ const [isOpen, setIsOpen] = useState(false)
             <polyline points="179,1 179,59 1,59 1,1 179,1" className="hl-line" />
           </svg> 
         </button>
+        {/* Open a Modal from a different component, used portal for that */}
         <Modal id="modal" open={isOpen} onClose={()=> setIsOpen(false)}>
-            
         </Modal>
       </section>
     </div>
