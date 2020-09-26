@@ -91,7 +91,7 @@ https://upmostly.com/tutorials/modal-components-react-custom-hooks
 https://giphy.com/gifs/wave-waves-surf-3og0IwoOyuY3ug4xaM
 
 
-** Quotation Form Page **
+**Quotation Form Page**
 
 ## Css class for visibility of text for screen readers only
 https://make.wordpress.org/accessibility/handbook/markup/the-css-class-screen-reader-text/
