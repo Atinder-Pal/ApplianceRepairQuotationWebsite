@@ -15,7 +15,7 @@ const LandingPage = () => {
     //create function StartTimer that's going to call our timer
     const startTimer = () => {
       //set Date to count from
-        const countdownDate = new Date('September 29, 2020 00:00:00').getTime();
+        const countdownDate = new Date('October 10, 2020 00:00:00').getTime();
         // function that calls new "now" every 1000ms =1sec
         period = setInterval(() => {
                 // build-in method that returns a current time
