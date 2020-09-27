@@ -114,3 +114,11 @@ Here we used html2canvas to screenshot the div we want to capture in PDF and the
 ## Trello Board
 
 https://trello.com/b/NPf2JsIi/chameleons-milestone-2-react-redux-router-project
+
+## Links to the Project Documentation
+
+https://docs.google.com/document/d/1uktZxAwuvDnrug5jabGXyvgYtBLDFasa4uMTUOQNsdA/edit - Project Summary , Wireframes
+https://docs.google.com/document/d/1MwGgMRtzKLBR3ynXiwuUdJVtywsr6M0N8k5d7jEuB1w/edit#heading=h.3it4segh1lt7 - Functionality Document
+https://docs.google.com/presentation/d/1HyC944bFI8txrlk3i2iSEMnyNlWPHeH9F7inKNEqebs/edit?ts=5f71221a#slide=id.p1 - Project Presentation
+
+
