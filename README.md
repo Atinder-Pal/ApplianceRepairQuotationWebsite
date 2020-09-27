@@ -118,9 +118,11 @@ https://www.pexels.com/@goumbik
 ## Google map 
 ``` npm install --save react-google-maps ```
 
+## React SlideShow
+``` npm install react-slideshow-image -S ```
 
-
-
+## Sending email directly without backend
+``` npm install emailjs-com — save ```
 
 
 **Quotation Form Page**
@@ -131,6 +133,28 @@ https://make.wordpress.org/accessibility/handbook/markup/the-css-class-screen-re
 ## Print the Quotation Form in PDF without Backend
 https://stackoverflow.com/questions/44989119/generating-a-pdf-file-from-react-components </br>
 Here we used html2canvas to screenshot the div we want to capture in PDF and then changed the svg (screenshot) into png and then changed png to pdf usig jsPDF </br>
+
+
+**Contact Us Page**
+
+## React Slideshow
+https://www.npmjs.com/package/react-slideshow-image
+
+## How to send e-mail directly from your react website, no backend required:
+https://medium.com/@barseetbrown/send-e-mail-directly-from-your-react-website-no-back-end-required-ed0d3106c3d4
+
+## React Hook Form(Guidelines)
+https://react-hook-form.com/get-started
+
+## Build an interactive Google Map 
+https://www.youtube.com/watch?v=Pf7g32CwX_s
+
+## Images taken
+https://magiccityappliancerepair.com/wp-content/uploads/2019/05/Stove-Repair-Technician-555x370.jpg
+https://blog.puls.com/dryer-repair-cost
+https://myhorizonhome.com/wp-content/uploads/2016/09/Refrigerator-Repair-Issues.jpg
+https://samedayrepair.ca/wp-content/uploads/2018/11/LaundryDryer.jpg
+
 
 
 
