@@ -63,7 +63,8 @@ const QuotationForm = () => {
                 <td>${ quoteInfo.newQuotation.price }</td>              
               </tr>              
             </tbody>              
-          </table>           
+          </table>  
+          <span className={styles.disclaimer}>**Disclaimer: The quote value is approximate and subject to change based on the manual troubleshooting performed by our Technician.</span>         
         </div>
         <button className={styles.pdfButton} onClick={printDocument}>Download PDF <MDBIcon far icon="file-pdf" /></button>
       </article>   
