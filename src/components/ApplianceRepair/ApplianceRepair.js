@@ -69,7 +69,7 @@ const ApplianceRepair = (props) => {
             <option value="Does not fill1">Does not fill</option>
             <option value="Does not spin1.5">Does not spin</option>
             <option value="Does not start1">Does not start</option>
-            <option value="Work intermittently2">Work intermittently</option>
+            <option value="Works intermittently2">Works intermittently</option>
           </select>
         </>
       );
@@ -86,7 +86,7 @@ const ApplianceRepair = (props) => {
             <option value="">Select Issue</option>
             <option value="No Heat1.5">No Heat</option>
             <option value="No Power1">No Power</option>
-            <option value="Does not Start1">Does not Start</option>
+            <option value="Does not start1">Does not start</option>
             <option value="Works intermittently1">Works intermittently</option>
           </select>
         </>
@@ -102,13 +102,13 @@ const ApplianceRepair = (props) => {
             className="browser-default custom-select"
           >
             <option value="">Select Issue</option>
-            <option value="Leaking fridge1.2">Leaking fridge</option>
-            <option value="Both compartments not cooling1.7">
-              Both compartments not cooling
+            <option value="Fridge leaks1.2">Fridge leaks</option>
+            <option value="Both compartments (Fridge & Freezer) do not cool1.7">
+              Both compartments (Fridge & Freezer) do not cool
             </option>
-            <option value="Fridge not cooling1.2">Fridge not cooling</option>
-            <option value="Freezer not cooling1.2">Freezer not cooling</option>
-            <option value="Icemaker issue2">Icemaker issue</option>
+            <option value="Fridge does not cool1.2">Fridge does not cool</option>
+            <option value="Freezer does not cool1.2">Freezer does not cool</option>
+            <option value="Issue with Icemaker2">Issue with Icemaker</option>
           </select>
         </>
       );
@@ -126,9 +126,9 @@ const ApplianceRepair = (props) => {
             <option value="Element stuck on high1.2">
               Element stuck on high
             </option>
-            <option value="Broil won't working1.7">Broil won't working</option>
-            <option value="Bake won't working1.2">Bake won't working</option>
-            <option value="Element won't heat1.2">Element won't heat</option>
+            <option value="Broil option does not work1.7">Broil option does not work</option>
+            <option value="Bake option does not work1.2">Bake option does not work</option>
+            <option value="Element does not heat up1.2">Element does not heat up</option>
           </select>
         </>
       );
