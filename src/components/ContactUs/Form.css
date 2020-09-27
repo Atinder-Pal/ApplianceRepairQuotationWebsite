@@ -7,15 +7,14 @@
 
 
   .centered {
-     
     background-image: url('./Images/desk1.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+
     width: 100vw;
     height: 100vh;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,15 +23,15 @@
     font-weight: bold;
     font-size: large;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-    
-    
     }
 
  .inputError {
   border-color: red;
 } 
 
+.textWidth {
+  width : 250px;
+}
 
 
 
