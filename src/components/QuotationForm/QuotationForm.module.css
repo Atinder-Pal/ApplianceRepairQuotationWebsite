@@ -97,6 +97,12 @@ table tr:last-of-type td {
     font-weight:500;
 }
 
+.disclaimer {
+    font-style: italic;
+    font-weight: 800;
+    font-size: small;
+}
+
 .pdfButton {
     display:block;
     margin:3vh auto 2vh auto;
@@ -142,6 +148,10 @@ table tr:last-of-type td {
     table tr:last-of-type td {
         font-size:x-large;
         font-weight:500;
+    }
+
+    .disclaimer {        
+        font-size: medium;
     }
 
     .pdfButton {
