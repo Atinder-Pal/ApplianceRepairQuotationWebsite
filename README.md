@@ -110,3 +110,7 @@ https://make.wordpress.org/accessibility/handbook/markup/the-css-class-screen-re
 
 https://stackoverflow.com/questions/44989119/generating-a-pdf-file-from-react-components </br>
 Here we used html2canvas to screenshot the div we want to capture in PDF and then changed the svg (screenshot) into png and then changed png to pdf usig jsPDF </br>
+
+## Trello Board
+
+https://trello.com/b/NPf2JsIi/chameleons-milestone-2-react-redux-router-project

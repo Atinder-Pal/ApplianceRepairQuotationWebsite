@@ -95,8 +95,8 @@ const Form = () => {
               type="text"
               value={values.message}
               onChange={handleChange}
-              //  rows={20}
-              // columns={20}
+              className="textWidth"
+             
             />
           </div>
         </div>
