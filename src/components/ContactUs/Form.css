@@ -1,11 +1,13 @@
-.error {
+ .error{
   color: red;
-  font-size: 10 px;
-}
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+  
+} 
 
 
   .centered {
-    /* height: 100vh; */
+     
     background-image: url('./Images/desk1.jpg');
     background-position: center;
     background-size: cover;
@@ -17,12 +19,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  
-  }
 
-.inputError {
+    /* font-feature-settings: on; */
+    font-weight: bold;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    
+    
+    }
+
+ .inputError {
   border-color: red;
-}
+} 
+
+
+
 
 
 

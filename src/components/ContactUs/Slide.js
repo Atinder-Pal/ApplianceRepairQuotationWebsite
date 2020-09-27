@@ -3,6 +3,7 @@ import { Slide } from "react-slideshow-image";
 import "./Slide.css";
 import "react-slideshow-image/dist/styles.css";
 
+//React SlideShow for four slides using slideShow function
 const Slideshow = () => {
   return (
     <div className="slide-container">
