@@ -15,7 +15,7 @@ const LandingPage = () => {
     //create function StartTimer that's going to call our timer
     const startTimer = () => {
       //set Date to count from
-        const countdownDate = new Date('September 28, 2020 00:00:00').getTime();
+        const countdownDate = new Date('September 29, 2020 00:00:00').getTime();
         // function that calls new "now" every 1000ms =1sec
         period = setInterval(() => {
                 // build-in method that returns a current time
@@ -45,7 +45,7 @@ const LandingPage = () => {
     useEffect(() => {
       // added let mount=true; for fixing unmounted rendering issue
       let mounted = true;
-      // Warning would always comeup during clearing variab and 
+      // Warning would always comeup during clearing variable and 
       // console would say: "Can't perform a React state update on an unmounted component. 
       // This is a no-op, but it indicates a memory leak in your application. 
       // To fix, cancel all subscriptions and asynchronous tasks in a useEffect cleanup function."
