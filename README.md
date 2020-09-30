@@ -40,7 +40,7 @@ Pages
 1. Landing Page
 2. ApplianceRepair page
 3. QuotationForm page
-4. ContactUs page
+4. ContactUs page - For Contact Us Page, the email js functionality will not run on browser, as the associated email account is deleted( as it was paid after consuming emails quota)
 
 # Citations
 
