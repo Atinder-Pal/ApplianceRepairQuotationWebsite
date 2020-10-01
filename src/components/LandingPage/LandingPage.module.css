@@ -36,6 +36,7 @@ body {
 /* =========Fade in Pictures kitchen starts========== */
 .bottom {
   background-image: url("../../img/landing/kitchen4.jpg");
+ background-blend-mode: multiply;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -46,6 +47,7 @@ body {
 
 .top {
   background-image: url("../../img/landing/kitchen7.jpg");
+ 
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
